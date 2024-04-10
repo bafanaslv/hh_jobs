@@ -1,24 +1,26 @@
 from abc import ABC, abstractmethod
-from src.class_internet_errors import Internet_connection_error
 import requests
 
 
-class HHapiabc(ABC):
+class HHapiABC(ABC):
     @abstractmethod
     def __init__(self):
         pass
 
     @abstractmethod
-    def get_vacancies(self):
+    def get_vacancies(self, params):
         pass
 
 
-class HeadHunterAPI(HHapiabc):
+class HeadHunterAPI(HHapiABC):
     def __init__(self, url_get):
         self.url_get = url_get
+        self.status_code = 0
 
-    def get_vacancies(self):
-        response = requests.get(self.url_get)
-        if response.status_code != 200:
-            raise Internet_connection_error
+    def get_vacancies(self, params):
+        response = requests.get(self.url_get, params=params)
+        self.status_code = response.status_code
         return response.json()
+
+    def get_status_code(self):
+        return self.status_code
