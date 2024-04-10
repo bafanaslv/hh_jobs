@@ -1,4 +1,4 @@
-class Internet_connection_error(Exception):
+class InternetConnectionError(Exception):
     def __init__(self, *args):
         self.message = args[0] if args else 'Неизвестная ошибка.'
 
