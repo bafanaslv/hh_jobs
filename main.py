@@ -23,7 +23,7 @@ if __name__ == '__main__':
         vacancies_json = json.dumps(hh_vacancies, ensure_ascii=False)
         file.write(vacancies_json)
 
-    # Преобразование набора данных из JSON в список объектов
+        # Преобразование набора данных из JSON в список объектов
     # vacancies_list = Vacancy.cast_to_object_list(hh_vacancies)
     #
     # # Пример работы контструктора класса с одной вакансией

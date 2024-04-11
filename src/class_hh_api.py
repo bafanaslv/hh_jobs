@@ -19,6 +19,7 @@ class HeadHunterAPI(HHapiABC):
 
     def get_vacancies(self, params):
         response = requests.get(self.url_get, params=params)
+
         self.status_code = response.status_code
         return response.json()
 
