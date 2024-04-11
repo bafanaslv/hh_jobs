@@ -12,8 +12,11 @@ if __name__ == '__main__':
 
     # Получение вакансий с hh.ru в формате JSON
     hh_vacancies = hh_api.get_vacancies()
+    print(len(hh_vacancies["items"]))
     if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
-        hh_api.create_json_file(hh_vacancies, VACANCIES_FILE)  # создание json-файла с вакансиями
+        for vacancy in hh_vacancies["items"]:
+            print(vacancy["name"])
+#        hh_api.create_json_file(hh_vacancies, VACANCIES_FILE)  # создание json-файла с вакансиями
 
     # Преобразование набора данных из JSON в список объектов
     # vacancies_list = Vacancy.cast_to_object_list(hh_vacancies)
