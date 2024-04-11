@@ -1,27 +1,19 @@
 from src.class_hh_api import HeadHunterAPI
-import json
 from config import ROOT_DIR
 
-#URL_GET = "https://httpbin.org/get"  # используемый адрес для отправки запроса
-URL_GET = "https://api.hh.ru/vacancies"  # используемый адрес для отправки запроса
-PARAMS = {'text': "python", 'area': '1', 'per_page': 100} # параметры запроса
-FILE_VACANCIES = ROOT_DIR+'/data/vacansies.json' # файл с вакасиями
+URL_GET = "https://api.hh.ru/vacancies"  # адрес для отправки запроса
+PARAMS = {'text': "python", 'area': '113', 'per_page': 100}  # параметры запроса
+VACANCIES_FILE = ROOT_DIR+'/data/vacansies.json'  # json-файл с вакансиями
 
 
 if __name__ == '__main__':
-    # Создание экземпляра класса для работы с API сайтов с вакансиями
-    hh_api = HeadHunterAPI(URL_GET)
+    # Создание экземпляра класса для работы с API сайтом с вакансиями HeadHater.
+    hh_api = HeadHunterAPI(URL_GET, PARAMS)
 
     # Получение вакансий с hh.ru в формате JSON
-    hh_vacancies = hh_api.get_vacancies(PARAMS)
-
-    # Получение статуса
-    print(hh_api.get_status_code())
-
-    """Запись списка вакансий в файл"""
-    with open(FILE_VACANCIES, "w", encoding="utf8") as file:
-        vacancies_json = json.dumps(hh_vacancies, ensure_ascii=False)
-        file.write(vacancies_json)
+    hh_vacancies = hh_api.get_vacancies()
+    if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
+        hh_api.create_json_file(hh_vacancies, VACANCIES_FILE)  # создание json-файла с вакансиями
 
     # Преобразование набора данных из JSON в список объектов
     # vacancies_list = Vacancy.cast_to_object_list(hh_vacancies)
