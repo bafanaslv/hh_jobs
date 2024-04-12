@@ -1,24 +1,6 @@
-from abc import ABC, abstractmethod
+from src.class_abstract import HHapiABC
 import json
 import requests
-
-
-class HHapiABC(ABC):
-    @abstractmethod
-    def __init__(self):
-        pass
-
-    @abstractmethod
-    def get_status_code(self):
-        pass
-
-    @abstractmethod
-    def get_vacancies(self, url_get, params):
-        pass
-
-    @abstractmethod
-    def create_json_file(self, hh_vacancies, vacansies_file):
-        pass
 
 
 class HeadHunterAPI(HHapiABC):

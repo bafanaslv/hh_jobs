@@ -1,4 +1,7 @@
-class Vacancy:
+from src.class_abstract import VacancyABC
+
+
+class Vacancy(VacancyABC):
     """ Класс для работы с вакансиями. """
     idv: int          # идетификатор вакансии
     name: str         # Нименование вакансии
@@ -47,7 +50,6 @@ class Vacancy:
             return ''
         else:
             return requirement_item["requirement"]
-
 
     @staticmethod
     def salary_valid(salary_item):
