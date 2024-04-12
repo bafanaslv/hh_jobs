@@ -26,32 +26,52 @@ class Vacancy:
         if isinstance(hh_vacancies, dict):
             vacancies_list = []
             for vacancy in hh_vacancies["items"]:
-                salary_item = cls.salary(vacancy['salary'])
+                salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
+                requirement = cls.requirement_valid(vacancy['snippet'])
                 vacancies_list.append(cls(idv=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
-                                      requirement=vacancy['snippet']['requirement'],
-                                      salary_min=salary_item[0],
-                                      salary_max=salary_item[1],
-                                      currency=salary_item[2],
+                                      requirement=requirement,
+                                      salary_min=salary_min,
+                                      salary_max=salary_max,
+                                      currency=currency,
                                       emp_name=vacancy['employer']['name'],
                                       emp_url=vacancy['alternate_url']))
-                print(vacancy["id"])
+            print(vacancies_list[51])
         else:
             print('Ошибочный формат файла.')
 
     @staticmethod
-    def check_requirement(self):
-        return ''
+    def requirement_valid(requirement_item):
+        if requirement_item is None:
+            return ''
+        else:
+            return requirement_item["requirement"]
+
 
     @staticmethod
-    def salary(salary_item):
+    def salary_valid(salary_item):
         if salary_item is None:
             salary_min = 0
             salary_max = 0
             currency = ''
         else:
-            salary_min = salary_item['from'],
-            salary_max = salary_item['to'],
-            currency = salary_item['currency']
-        return [salary_min, salary_max, currency]
+            if salary_item['from'] == "None":
+                salary_min = 0
+            else:
+                salary_min = salary_item['from']
+
+            if salary_item['to'] == "None":
+                salary_max = 0
+            else:
+                salary_max = salary_item['to']
+
+            if salary_item['currency'] == "None":
+                currency = ''
+            else:
+                currency = salary_item['currency']
+
+        return salary_min, salary_max, currency
+
+    def __str__(self):
+        return f'{self.requirement} c зп {self.salary_min} {self.salary_max} {self.currency}'
