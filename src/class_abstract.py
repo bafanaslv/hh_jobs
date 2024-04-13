@@ -11,14 +11,6 @@ class VacancyABC(ABC):
         pass
 
     @abstractmethod
-    def requirement_valid(self):
-        pass
-
-    @abstractmethod
-    def salary_valid(self):
-        pass
-
-    @abstractmethod
     def __str__(self):
         pass
 
