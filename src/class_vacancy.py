@@ -1,5 +1,5 @@
 from src.class_abstract import VacancyABC
-
+import json
 
 class Vacancy(VacancyABC):
     """ Класс для работы с вакансиями. """
@@ -77,3 +77,7 @@ class Vacancy(VacancyABC):
 
     def __str__(self):
         return f'{self.requirement} c зп {self.salary_min} {self.salary_max} {self.currency}'
+
+
+    with open('data.json', 'w') as file:
+    json.dump(data, file)
