@@ -1,24 +1,25 @@
 from src.class_abstract import VacancyABC
-import json
 
 
 class Vacancy(VacancyABC):
     """ Класс для работы с вакансиями. """
-    idv: int          # идетификатор вакансии
-    name: str         # Нименование вакансии
-    area: str         # регион где находится вакансия
-    requirement: str  # требования к соискателю
-    salary_min: int   # мминимальная зарплата
-    salary_max: int   # максимальная зарплата
-    currency: str     # валюта зарплаты
-    emp_name: str     # работодатель
-    emp_url: str      # ссылка на вакансию
+    idv: int             # идетификатор вакансии
+    name: str            # Нименование вакансии
+    area: str            # регион где находится вакансия
+    requirement: str     # требования к соискателю
+    responsibility: str  # круг обязанностей
+    salary_min: int      # мминимальная зарплата
+    salary_max: int      # максимальная зарплата
+    currency: str        # валюта зарплаты
+    emp_name: str        # работодатель
+    emp_url: str         # ссылка на вакансию
 
-    def __init__(self, idv, name, area, requirement, salary_max, salary_min, currency, emp_name, emp_url):
+    def __init__(self, idv, name, area, requirement, responsibility, salary_max, salary_min, currency, emp_name, emp_url):
         self.idv = idv
         self.name = name
         self.area = area
         self.requirement = requirement
+        self.responsibility = responsibility
         self.salary_min = salary_min
         self.salary_max = salary_max
         self.currency = currency
@@ -31,26 +32,30 @@ class Vacancy(VacancyABC):
             vacancies_list = []
             for vacancy in hh_vacancies["items"]:
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
-                requirement = cls.requirement_valid(vacancy['snippet'])
+                responsibility = cls.responsibility_valid(vacancy['snippet'])
                 vacancies_list.append(cls(idv=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
-                                      requirement=requirement,
+                                      requirement=vacancy['snippet']['requirement'],
+                                      responsibility=responsibility,
                                       salary_min=salary_min,
                                       salary_max=salary_max,
                                       currency=currency,
                                       emp_name=vacancy['employer']['name'],
                                       emp_url=vacancy['alternate_url']))
-            print(vacancies_list[51])
+            return vacancies_list
         else:
             print('Ошибочный формат файла.')
 
     @staticmethod
-    def requirement_valid(requirement_item):
-        if requirement_item is None:
+    def responsibility_valid(responsibility_item):
+        if not responsibility_item:
             return ''
         else:
-            return requirement_item["requirement"]
+            if not responsibility_item["responsibility"]:
+                return 'не указан'
+            else:
+                return responsibility_item["responsibility"]
 
     @staticmethod
     def salary_valid(salary_item):
@@ -59,25 +64,41 @@ class Vacancy(VacancyABC):
             salary_max = 0
             currency = ''
         else:
-            if salary_item['from'] == "None":
+            if not salary_item['from']:
                 salary_min = 0
             else:
                 salary_min = salary_item['from']
 
-            if salary_item['to'] == "None":
+            if not salary_item['to']:
                 salary_max = 0
             else:
                 salary_max = salary_item['to']
 
-            if salary_item['currency'] == "None":
-                currency = ''
+            if not salary_item['currency']:
+                currency = 'руб.'
             else:
-                currency = salary_item['currency']
+                if salary_item['currency'] == 'RUR':
+                    currency = 'руб.'
+                else:
+                    currency = salary_item['currency']
 
         return salary_min, salary_max, currency
 
     def __str__(self):
-        return f'{self.requirement} c зп {self.salary_min} {self.salary_max} {self.currency}'
+        if self.salary_max == 0 and self.salary_max == 0:
+            salary ='не указана'
+        elif self.salary_max > 0 and self.salary_max > 0:
+            salary = f'от {self.salary_min} до {self.salary_max}'
+        elif self.salary_max > 0:
+            salary = self.salary_max
+        elif self.salary_min > 0:
+            salary = self.salary_min
 
-    # with open('data.json', 'w') as file:
-    # json.dump(data, file)
+        return (f'Вакансия: {self.name}\n'
+                f'Регион:   {self.area}\n'
+                f'Требования к соискателю: {self.requirement}\n'
+                f'Круг обязанностей: {self.responsibility}\n'
+                f'Зарплата от {salary} {self.currency}')
+
+
+
