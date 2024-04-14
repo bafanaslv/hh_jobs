@@ -20,5 +20,6 @@ if __name__ == '__main__':
         json_saver.save_json_file(vacancies_list, VACANCIES_FILE)
         for vacancy in vacancies_list:
             print(vacancy)
+            print('')
     else:
         print(hh_api.get_status_code())

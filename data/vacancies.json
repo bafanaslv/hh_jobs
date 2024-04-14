@@ -108,18 +108,6 @@
         "emp_url": "https://hh.ru/vacancy/96689565"
     },
     {
-        "idv": "95076429",
-        "name": "Junior Marketing Data Analyst",
-        "area": "Москва",
-        "requirement": "Опыт написания SQL-запросов различной сложности в <highlighttext>Oracle</highlighttext>. Английский уровня Intermediate и выше. Навыки работы с Python или с другими...",
-        "responsibility": "Написание простых и средней сложности запросов SQL запросов в <highlighttext>Oracle</highlighttext>. Подготовка оперативных ad-hoc срезов по метрикам. On-going отчетность...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "ProfeeLab",
-        "emp_url": "https://hh.ru/vacancy/95076429"
-    },
-    {
         "idv": "96884315",
         "name": "QA инженер/Тестировщик",
         "area": "Санкт-Петербург",
@@ -130,6 +118,18 @@
         "currency": "руб.",
         "emp_name": "Enjoypro",
         "emp_url": "https://hh.ru/vacancy/96884315"
+    },
+    {
+        "idv": "95076429",
+        "name": "Junior Marketing Data Analyst",
+        "area": "Москва",
+        "requirement": "Опыт написания SQL-запросов различной сложности в <highlighttext>Oracle</highlighttext>. Английский уровня Intermediate и выше. Навыки работы с Python или с другими...",
+        "responsibility": "Написание простых и средней сложности запросов SQL запросов в <highlighttext>Oracle</highlighttext>. Подготовка оперативных ad-hoc срезов по метрикам. On-going отчетность...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "ProfeeLab",
+        "emp_url": "https://hh.ru/vacancy/95076429"
     },
     {
         "idv": "96621030",
@@ -252,18 +252,6 @@
         "emp_url": "https://hh.ru/vacancy/96497766"
     },
     {
-        "idv": "88876496",
-        "name": "Инженер эксплуатации (Linux)",
-        "area": "Москва",
-        "requirement": "Используемый стек технологий: Ansible. Networking, TCP/IP. Опыт администрирования Linux (мы используем RedHat/CentOS). Умение выполнять диагностику сети и сетевой...",
-        "responsibility": "Взаимодействие с техническими службами телеком-операторов и пользователей АПК по вопросам эксплуатации комплексов. Настройка серверного и сетевого оборудования. ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Цитадель",
-        "emp_url": "https://hh.ru/vacancy/88876496"
-    },
-    {
         "idv": "93889237",
         "name": "Стажер-программист Java",
         "area": "Москва",
@@ -274,6 +262,18 @@
         "currency": "руб.",
         "emp_name": "ББРК",
         "emp_url": "https://hh.ru/vacancy/93889237"
+    },
+    {
+        "idv": "88876496",
+        "name": "Инженер эксплуатации (Linux)",
+        "area": "Москва",
+        "requirement": "Используемый стек технологий: Ansible. Networking, TCP/IP. Опыт администрирования Linux (мы используем RedHat/CentOS). Умение выполнять диагностику сети и сетевой...",
+        "responsibility": "Взаимодействие с техническими службами телеком-операторов и пользователей АПК по вопросам эксплуатации комплексов. Настройка серверного и сетевого оборудования. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "Цитадель",
+        "emp_url": "https://hh.ru/vacancy/88876496"
     },
     {
         "idv": "96719647",
@@ -516,6 +516,18 @@
         "emp_url": "https://hh.ru/vacancy/96491480"
     },
     {
+        "idv": "95678867",
+        "name": "Java-разработчик",
+        "area": "Москва",
+        "requirement": "Опыт работы с брокерами сообщений Kafka или RabbitMq. Опыт работы с <highlighttext>Oracle</highlighttext> или другими СУБД. Имеете опыт разработки unit-тестов...",
+        "responsibility": "Написание сложной логики в бэкенд-части, работа с непростой предметной областью. Быстрое ориентирование в коде проекта, проведение reverse engineering. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "CUSTIS",
+        "emp_url": "https://hh.ru/vacancy/95678867"
+    },
+    {
         "idv": "95471014",
         "name": "Разработчик-аналитик Python Oracle",
         "area": "Москва",
@@ -528,16 +540,16 @@
         "emp_url": "https://hh.ru/vacancy/95471014"
     },
     {
-        "idv": "95678867",
-        "name": "Java-разработчик",
-        "area": "Москва",
-        "requirement": "Опыт работы с брокерами сообщений Kafka или RabbitMq. Опыт работы с <highlighttext>Oracle</highlighttext> или другими СУБД. Имеете опыт разработки unit-тестов...",
-        "responsibility": "Написание сложной логики в бэкенд-части, работа с непростой предметной областью. Быстрое ориентирование в коде проекта, проведение reverse engineering. ",
+        "idv": "96246250",
+        "name": "Java-разработчик (Junior)",
+        "area": "Самара",
+        "requirement": "Иметь опыт разработки приложений на java (это могут быть не только коммерческие продукты, но и личные проекты). Отличные теоретические знания...",
+        "responsibility": "Разработка и развитие сайтов компании. Участие в разработке решений в области автоматизации логистических процессов. Участие в разработке высоконагруженных бизнес-систем.",
         "salary_min": 0,
         "salary_max": 0,
         "currency": "",
-        "emp_name": "CUSTIS",
-        "emp_url": "https://hh.ru/vacancy/95678867"
+        "emp_name": "Magenta Technology",
+        "emp_url": "https://hh.ru/vacancy/96246250"
     },
     {
         "idv": "95438264",
@@ -562,18 +574,6 @@
         "currency": "",
         "emp_name": "БПС Инновационные Программные Решения",
         "emp_url": "https://hh.ru/vacancy/95159304"
-    },
-    {
-        "idv": "96246250",
-        "name": "Java-разработчик (Junior)",
-        "area": "Самара",
-        "requirement": "Иметь опыт разработки приложений на java (это могут быть не только коммерческие продукты, но и личные проекты). Отличные теоретические знания...",
-        "responsibility": "Разработка и развитие сайтов компании. Участие в разработке решений в области автоматизации логистических процессов. Участие в разработке высоконагруженных бизнес-систем.",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Magenta Technology",
-        "emp_url": "https://hh.ru/vacancy/96246250"
     },
     {
         "idv": "92032011",
@@ -660,18 +660,6 @@
         "emp_url": "https://hh.ru/vacancy/96835005"
     },
     {
-        "idv": "95434199",
-        "name": "Frontend разработчик (Middle)",
-        "area": "Челябинск",
-        "requirement": "Git, Gitlab-ci, Docker. — Опыт работы с TypeScript. Будет плюсом: — Знание Javascript. — Опыт работы с базами данных <highlighttext>Oracle</highlighttext>, Postgress, MySQL...",
-        "responsibility": "Проект: — ПАКЦ (платформа автоматизации контакт-центров) — no-code-платформа, основанная на работе нейронных сетей с распознаванием и синтезом речи. ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Интерсвязь",
-        "emp_url": "https://hh.ru/vacancy/95434199"
-    },
-    {
         "idv": "85437503",
         "name": "Младший программист(Junior)",
         "area": "Москва",
@@ -682,6 +670,18 @@
         "currency": "руб.",
         "emp_name": "ФГБУ ФНКЦ специализированных видов медицинской помощи и медицинских технологий ФМБА России",
         "emp_url": "https://hh.ru/vacancy/85437503"
+    },
+    {
+        "idv": "95434199",
+        "name": "Frontend разработчик (Middle)",
+        "area": "Челябинск",
+        "requirement": "Git, Gitlab-ci, Docker. — Опыт работы с TypeScript. Будет плюсом: — Знание Javascript. — Опыт работы с базами данных <highlighttext>Oracle</highlighttext>, Postgress, MySQL...",
+        "responsibility": "Проект: — ПАКЦ (платформа автоматизации контакт-центров) — no-code-платформа, основанная на работе нейронных сетей с распознаванием и синтезом речи. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "Интерсвязь",
+        "emp_url": "https://hh.ru/vacancy/95434199"
     },
     {
         "idv": "94254962",
@@ -708,18 +708,6 @@
         "emp_url": "https://hh.ru/vacancy/96205294"
     },
     {
-        "idv": "96731235",
-        "name": "Экономист по управленческому учету",
-        "area": "Ульяновск",
-        "requirement": "Уверенный пользователь Excel, Power Point. Как преимущество - знание ИС Hyperion <highlighttext>Oracle</highlighttext>, SAP R3. Знание английского языка (уровень Pre-Intermediate). ",
-        "responsibility": "Ведение управленческого учета по закрепленному направлению деятельности. Осуществление анализа фактических расходов. Разработка плановых и нормативных показателей для формирования годового бюджета...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Волга-Днепр, Группа компаний",
-        "emp_url": "https://hh.ru/vacancy/96731235"
-    },
-    {
         "idv": "96627654",
         "name": "Разработчик java (модуль FLEXTERA)",
         "area": "Москва",
@@ -730,6 +718,18 @@
         "currency": "",
         "emp_name": "Diasoft",
         "emp_url": "https://hh.ru/vacancy/96627654"
+    },
+    {
+        "idv": "96731235",
+        "name": "Экономист по управленческому учету",
+        "area": "Ульяновск",
+        "requirement": "Уверенный пользователь Excel, Power Point. Как преимущество - знание ИС Hyperion <highlighttext>Oracle</highlighttext>, SAP R3. Знание английского языка (уровень Pre-Intermediate). ",
+        "responsibility": "Ведение управленческого учета по закрепленному направлению деятельности. Осуществление анализа фактических расходов. Разработка плановых и нормативных показателей для формирования годового бюджета...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "Волга-Днепр, Группа компаний",
+        "emp_url": "https://hh.ru/vacancy/96731235"
     },
     {
         "idv": "96701933",
@@ -828,18 +828,6 @@
         "emp_url": "https://hh.ru/vacancy/96599539"
     },
     {
-        "idv": "93452411",
-        "name": "JavaScript разработчик (TypeScript)",
-        "area": "Москва",
-        "requirement": "От 2 лет и более опыта коммерческой разработки на позиции фронтенд / фулстек разработчика. Опыт работы с технологиями: Javascript, sql. ",
-        "responsibility": "Решать поставленные задачи. Участвовать в Code Review. Обеспечивать качество разрабатываемого продукта. Соблюдать стандарты разработки. Писать код с использованием платформы XBPM...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Юнитариус",
-        "emp_url": "https://hh.ru/vacancy/93452411"
-    },
-    {
         "idv": "96019907",
         "name": "Инженер по тестированию ПО (Middle/Senior)",
         "area": "Москва",
@@ -850,6 +838,18 @@
         "currency": "",
         "emp_name": "Рексофт",
         "emp_url": "https://hh.ru/vacancy/96019907"
+    },
+    {
+        "idv": "93452411",
+        "name": "JavaScript разработчик (TypeScript)",
+        "area": "Москва",
+        "requirement": "От 2 лет и более опыта коммерческой разработки на позиции фронтенд / фулстек разработчика. Опыт работы с технологиями: Javascript, sql. ",
+        "responsibility": "Решать поставленные задачи. Участвовать в Code Review. Обеспечивать качество разрабатываемого продукта. Соблюдать стандарты разработки. Писать код с использованием платформы XBPM...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "Юнитариус",
+        "emp_url": "https://hh.ru/vacancy/93452411"
     },
     {
         "idv": "96675460",
@@ -900,6 +900,18 @@
         "emp_url": "https://hh.ru/vacancy/93453655"
     },
     {
+        "idv": "94973472",
+        "name": "Начальник управления информационных технологий и системных проектов (руководитель IT-отдела)",
+        "area": "Санкт-Петербург",
+        "requirement": "Высшим образованием (IT). Стратегическим мышлением, умением работать в режиме многозадачности, умением организовывать работу команды. Уровень владения ПК - программист VBA, MS...",
+        "responsibility": "Сопровождение АС «Парус» модуль «Заработная плата» (<highlighttext>Oracle</highlighttext>). Внедрение и сопровождение СЭД (Евфрат, Directum, Контур). Техническое обслуживание и поддержка СКУД (ZKTeco). ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "Филиал АО ЛОМО ОП Управляющая компания ЛОМО-Недвижимость",
+        "emp_url": "https://hh.ru/vacancy/94973472"
+    },
+    {
         "idv": "96384929",
         "name": "Разработчик C#",
         "area": "Москва",
@@ -912,16 +924,16 @@
         "emp_url": "https://hh.ru/vacancy/96384929"
     },
     {
-        "idv": "94973472",
-        "name": "Начальник управления информационных технологий и системных проектов (руководитель IT-отдела)",
-        "area": "Санкт-Петербург",
-        "requirement": "Высшим образованием (IT). Стратегическим мышлением, умением работать в режиме многозадачности, умением организовывать работу команды. Уровень владения ПК - программист VBA, MS...",
-        "responsibility": "Сопровождение АС «Парус» модуль «Заработная плата» (<highlighttext>Oracle</highlighttext>). Внедрение и сопровождение СЭД (Евфрат, Directum, Контур). Техническое обслуживание и поддержка СКУД (ZKTeco). ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "Филиал АО ЛОМО ОП Управляющая компания ЛОМО-Недвижимость",
-        "emp_url": "https://hh.ru/vacancy/94973472"
+        "idv": "92717237",
+        "name": "Rust Developer",
+        "area": "Москва",
+        "requirement": "Умение разбираться в legacy-коде на C, оптимизировать (производительность, память). Опыт работы с PostgreSQL/<highlighttext>Oracle</highlighttext> RDBMS/Elasticsearch. Работа с git...",
+        "responsibility": "Разрабатывать новые модули на языке Rust для существующей СУБД. Сопровождать код Unit и интеграционными тестами исполняемыми в рамках CI pipelines. ",
+        "salary_min": 150000,
+        "salary_max": 400000,
+        "currency": "руб.",
+        "emp_name": "Суровый байт",
+        "emp_url": "https://hh.ru/vacancy/92717237"
     },
     {
         "idv": "96388893",
@@ -958,18 +970,6 @@
         "currency": "руб.",
         "emp_name": "ЭОС",
         "emp_url": "https://hh.ru/vacancy/94814148"
-    },
-    {
-        "idv": "92717237",
-        "name": "Rust Developer",
-        "area": "Москва",
-        "requirement": "Умение разбираться в legacy-коде на C, оптимизировать (производительность, память). Опыт работы с PostgreSQL/<highlighttext>Oracle</highlighttext> RDBMS/Elasticsearch. Работа с git...",
-        "responsibility": "Разрабатывать новые модули на языке Rust для существующей СУБД. Сопровождать код Unit и интеграционными тестами исполняемыми в рамках CI pipelines. ",
-        "salary_min": 150000,
-        "salary_max": 400000,
-        "currency": "руб.",
-        "emp_name": "Суровый байт",
-        "emp_url": "https://hh.ru/vacancy/92717237"
     },
     {
         "idv": "95030844",
@@ -1056,18 +1056,6 @@
         "emp_url": "https://hh.ru/vacancy/96817311"
     },
     {
-        "idv": "96839191",
-        "name": "QA Lead",
-        "area": "Москва",
-        "requirement": "Опыт диагностики и оптимизации СУБД (<highlighttext>Oracle</highlighttext> или MSSQL), плюсом будут опыт разработки и опыт в оптимизации ELK / Mongo. ",
-        "responsibility": "Экспертиза по средствам диагностики проблем производительности в различных компонентах бизнес систем (сеть, оборудование, операционные системы, базы данных, сервера приложения, java...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "emp_name": "RedLab",
-        "emp_url": "https://hh.ru/vacancy/96839191"
-    },
-    {
         "idv": "95925088",
         "name": "Стажер Аналитик",
         "area": "Москва",
@@ -1078,6 +1066,18 @@
         "currency": "",
         "emp_name": "РСХБ-Интех",
         "emp_url": "https://hh.ru/vacancy/95925088"
+    },
+    {
+        "idv": "96839191",
+        "name": "QA Lead",
+        "area": "Москва",
+        "requirement": "Опыт диагностики и оптимизации СУБД (<highlighttext>Oracle</highlighttext> или MSSQL), плюсом будут опыт разработки и опыт в оптимизации ELK / Mongo. ",
+        "responsibility": "Экспертиза по средствам диагностики проблем производительности в различных компонентах бизнес систем (сеть, оборудование, операционные системы, базы данных, сервера приложения, java...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "emp_name": "RedLab",
+        "emp_url": "https://hh.ru/vacancy/96839191"
     },
     {
         "idv": "96073988",
