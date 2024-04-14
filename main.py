@@ -4,7 +4,7 @@ from config import ROOT_DIR
 from src.class_json_saver import JSONSaver
 
 URL_GET = "https://api.hh.ru/vacancies"  # адрес для отправки запроса
-PARAMS = {'text': "python", 'area': '113', 'per_page': 100}  # параметры запроса
+PARAMS = {'text': 'oracle', 'area': '113', 'per_page': 100}  # параметры запроса
 VACANCIES_FILE = ROOT_DIR+'/data/vacansies.json'  # json-файл с вакансиями
 
 
@@ -19,6 +19,6 @@ if __name__ == '__main__':
         json_saver = JSONSaver()
         json_saver.save_json_file(hh_vacancies, VACANCIES_FILE)
         for vacancy in vacancies_list:
-            print(vacancy.responsibility)
+            print(vacancy)
     else:
         print(hh_api.get_status_code())

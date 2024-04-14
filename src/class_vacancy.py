@@ -1,7 +1,4 @@
-from src.class_abstract import VacancyABC
-
-
-class Vacancy(VacancyABC):
+class Vacancy:
     """ Класс для работы с вакансиями. """
     idv: int             # идетификатор вакансии
     name: str            # Нименование вакансии
@@ -75,7 +72,7 @@ class Vacancy(VacancyABC):
                 salary_max = salary_item['to']
 
             if not salary_item['currency']:
-                currency = 'руб.'
+                currency = ''
             else:
                 if salary_item['currency'] == 'RUR':
                     currency = 'руб.'
@@ -85,20 +82,17 @@ class Vacancy(VacancyABC):
         return salary_min, salary_max, currency
 
     def __str__(self):
-        if self.salary_max == 0 and self.salary_max == 0:
-            salary ='не указана'
-        elif self.salary_max > 0 and self.salary_max > 0:
-            salary = f'от {self.salary_min} до {self.salary_max}'
+        if self.salary_min == 0 and self.salary_max == 0:
+            sal = 'не указана'
+        elif self.salary_min > 0 and self.salary_max > 0:
+            sal = f'от {self.salary_min} до {self.salary_max}'
         elif self.salary_max > 0:
-            salary = self.salary_max
+            sal = self.salary_max
         elif self.salary_min > 0:
-            salary = self.salary_min
+            sal = self.salary_min
 
         return (f'Вакансия: {self.name}\n'
                 f'Регион:   {self.area}\n'
                 f'Требования к соискателю: {self.requirement}\n'
                 f'Круг обязанностей: {self.responsibility}\n'
-                f'Зарплата от {salary} {self.currency}')
-
-
-
+                f'Зарплата {sal} {self.currency}')

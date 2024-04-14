@@ -1,5 +1,4 @@
 from src.class_abstract import HHapiABC
-import json
 import requests
 
 
@@ -20,11 +19,4 @@ class HeadHunterAPI(HHapiABC):
         self.url_get = url_get
         self.params = params
         self.status_code = response.status_code
-
         return response.json()
-
-    def create_json_file(self, hh_vacancies, vacansies_file):
-        """ Запись вакансий в файл vacansies_file """
-        with open(vacansies_file, "w", encoding="utf8") as file:
-            vacancies_json = json.dumps(hh_vacancies, ensure_ascii=False)
-            file.write(vacancies_json)
