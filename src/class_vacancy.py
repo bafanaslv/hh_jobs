@@ -11,7 +11,8 @@ class Vacancy:
     emp_name: str        # работодатель
     emp_url: str         # ссылка на вакансию
 
-    def __init__(self, idv, name, area, requirement, responsibility, salary_max, salary_min, currency, emp_name, emp_url):
+    def __init__(self, idv, name, area, requirement, responsibility, salary_max, salary_min,
+                 currency, emp_name, emp_url):
         self.idv = idv
         self.name = name
         self.area = area
@@ -82,14 +83,15 @@ class Vacancy:
         return salary_min, salary_max, currency
 
     def __str__(self):
+        sal = ''
         if self.salary_min == 0 and self.salary_max == 0:
             sal = 'не указана'
         elif self.salary_min > 0 and self.salary_max > 0:
             sal = f'от {self.salary_min} до {self.salary_max}'
         elif self.salary_max > 0:
-            sal = self.salary_max
+            sal = str(self.salary_max)
         elif self.salary_min > 0:
-            sal = self.salary_min
+            sal = str(self.salary_min)
 
         return (f'Вакансия: {self.name}\n'
                 f'Регион:   {self.area}\n'
