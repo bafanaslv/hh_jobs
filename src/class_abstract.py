@@ -13,3 +13,8 @@ class HHapiABC(ABC):
     @abstractmethod
     def get_vacancies(self, url_get, params):
         pass
+
+
+class Connector(ABC):
+    def save_json_file(self, vacancies, json_file):
+        pass

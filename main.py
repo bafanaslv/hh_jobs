@@ -17,7 +17,7 @@ if __name__ == '__main__':
     if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
         vacancies_list = Vacancy.create_objects_vacancy(hh_vacancies)
         json_saver = JSONSaver()
-        json_saver.save_my_json_file(vacancies_list, VACANCIES_FILE)
+        json_saver.save_json_file(vacancies_list, VACANCIES_FILE)
         for vacancy in vacancies_list:
             print(vacancy)
     else:

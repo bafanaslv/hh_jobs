@@ -1,8 +1,8 @@
 import json
+from src.class_abstract import Connector
 
-
-class JSONSaver:
-    def save_my_json_file(self, vacancies, json_file):
+class JSONSaver(Connector):
+    def save_json_file(self, vacancies, json_file):
         vacancies_json = []
         for vacancy in vacancies:
             vac_dict = {"idv": vacancy.idv,
