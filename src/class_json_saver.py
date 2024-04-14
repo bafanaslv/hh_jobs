@@ -1,6 +1,7 @@
 import json
 from src.class_abstract import Connector
 
+
 class JSONSaver(Connector):
     def save_json_file(self, vacancies, json_file):
         vacancies_json = []
