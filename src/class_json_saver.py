@@ -24,6 +24,7 @@ class JSONSaver(Connector):
             vacancy_json = json.dumps(vacancies_list, ensure_ascii=False, indent=4)
             file.write(vacancy_json)
 
+    def add_vacancy(self, vacancies_list, json_file):
         with open(json_file, 'w', encoding="UTF-8") as file:
             vacancy_json = json.dumps(vacancies_list, ensure_ascii=False, indent=4)
             file.write(vacancy_json)
