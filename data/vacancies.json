@@ -1,14 +1,26 @@
 [
     {
-        "id": 96973565,
-        "name": "Программист PL/SQL уровня junour",
-        "area": "Казань",
-        "requirement": "Знание SQL запросов",
-        "responsibility": "Знание SQL запросов",
-        "salary_min": 200000,
-        "salary_max": 100000,
+        "id": "96726292",
+        "name": "Начальник отдела",
+        "area": "Новый Уренгой",
+        "requirement": "Продвинутым пользователь exсel. Является уверенным пользователь <highlighttext>Oracle</highlighttext> Primavera P6. Знание основ выполнения работ строительства объектов. Знание и понимание технологий...",
+        "responsibility": "Организовывать и участвовать в формировании графика производства работ из ПО <highlighttext>Oracle</highlighttext> Primavera P6 для отдельных исполнителей, в том числе...",
+        "salary_min": 250000,
+        "salary_max": 0,
         "currency": "руб.",
-        "employer": "Facebook",
-        "employer_url": "http:\\www.facebook.com"
+        "employer": "ГСП-2",
+        "employer_url": "https://hh.ru/vacancy/96726292"
+    },
+    {
+        "id": "96973564",
+        "name": "Специалист по обработке данных",
+        "area": "Тверь",
+        "requirement": "Уверенный пользователь MS Excel (желательны навыки работы с формулами и макросами). Опыт работы с большими объемами данных в информационных системах...",
+        "responsibility": "Работа со справочниками в информационной системе (анализ поступающих заявок, подготовка данных к загрузке, создание и настройка новых элементов в <highlighttext>Oracle</highlighttext>). ",
+        "salary_min": 33300,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Компания Русский Свет",
+        "employer_url": "https://hh.ru/vacancy/96973564"
     }
 ]

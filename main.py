@@ -23,15 +23,15 @@ if __name__ == '__main__':
             print(vacancy)
             print('')
 
-        id_vac = int(max(vacancies_id_list)) + 1
         # Добавление новой вакансии в json - файл.
+        id_vac = int(max(vacancies_id_list)) + 1
         new_vacancy_object_list = []
         new_vacancy_object_list.append(Vacancy(id_vac, "Программист PL/SQL уровня junour", "Казань",
                               "Знание SQL запросов", "Знание SQL запросов",
                               100000, 200000, "руб.", "Facebook",
                               "http:\\www.facebook.com"))
         vacancies_dict_list = json_saver.create_vacancies_list(new_vacancy_object_list)
-        json_saver.add_vacancy(vacancies_dict_list, VACANCIES_FILE)
-        print(new_vacancy_object_list[0])
+#        json_saver.add_vacancy(vacancies_dict_list, VACANCIES_FILE)
+        # print(new_vacancy_object_list[0])
     else:
         print(hh_api.get_status_code())
