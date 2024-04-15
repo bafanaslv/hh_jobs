@@ -21,3 +21,10 @@ class JSONSaver(Connector):
         with open(json_file, 'w', encoding="UTF-8") as file:
             vacancy_json = json.dumps(vacancies_json, ensure_ascii=False, indent=4)
             file.write(vacancy_json)
+
+    def vacancy_add(self):
+        pass
+
+    def vacancy_del(self):
+        pass
+

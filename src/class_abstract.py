@@ -16,5 +16,14 @@ class HHapiABC(ABC):
 
 
 class Connector(ABC):
+    @abstractmethod
     def save_json_file(self, vacancies, json_file):
+        pass
+
+    @abstractmethod
+    def vacancy_add(self):
+        pass
+
+    @abstractmethod
+    def vacancy_del(self):
         pass
