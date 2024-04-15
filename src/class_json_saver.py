@@ -3,8 +3,8 @@ from src.class_abstract import Connector
 
 
 class JSONSaver(Connector):
-    def save_json_file(self, vacancies, json_file):
-        vacancies_json = []
+    def create_vacancies_list(self, vacancies):
+        vacancies_list = []
         for vacancy in vacancies:
             vacancy_dict = {"id": vacancy.id,
                         "name": vacancy.name,
@@ -16,15 +16,20 @@ class JSONSaver(Connector):
                         "currency": vacancy.currency,
                         "employer": vacancy.employer,
                         "employer_url": vacancy.employer_url}
-            vacancies_json.append(vacancy_dict)
+            vacancies_list.append(vacancy_dict)
+        return vacancies_list
 
+    def save_json_file(self, vacancies_list, json_file):
         with open(json_file, 'w', encoding="UTF-8") as file:
-            vacancy_json = json.dumps(vacancies_json, ensure_ascii=False, indent=4)
+            vacancy_json = json.dumps(vacancies_list, ensure_ascii=False, indent=4)
             file.write(vacancy_json)
 
-    def vacancy_add(self):
+        with open(json_file, 'w', encoding="UTF-8") as file:
+            vacancy_json = json.dumps(vacancies_list, ensure_ascii=False, indent=4)
+            file.write(vacancy_json)
+
+    def del_vacancy(self):
         pass
 
-    def vacancy_del(self):
+    def select_vacancies(self):
         pass
-

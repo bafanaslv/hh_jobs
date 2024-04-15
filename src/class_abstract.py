@@ -21,9 +21,13 @@ class Connector(ABC):
         pass
 
     @abstractmethod
-    def vacancy_add(self):
+    def add_vacancy(self):
         pass
 
     @abstractmethod
-    def vacancy_del(self):
+    def del_vacancy(self):
+        pass
+
+    @abstractmethod
+    def select_vacancies(self):
         pass

@@ -1,19 +1,19 @@
 class Vacancy:
     """ Класс для работы с вакансиями. """
-    id: int              # идетификатор вакансии
-    name: str            # Нименование вакансии
+    id: int              # идентификатор вакансии
+    name: str            # наименование вакансии
     area: str            # регион где находится вакансия
     requirement: str     # требования к соискателю
     responsibility: str  # круг обязанностей
     salary_min: int      # мминимальная зарплата
     salary_max: int      # максимальная зарплата
     currency: str        # валюта зарплаты
-    emp_name: str        # работодатель
-    emp_url: str         # ссылка на вакансию
+    employer: str        # работодатель
+    employer_url: str    # ссылка на вакансию
 
-    def __init__(self, id, name, area, requirement, responsibility, salary_max, salary_min,
+    def __init__(self, id_, name, area, requirement, responsibility, salary_max, salary_min,
                  currency, employer, employer_url):
-        self.id = id
+        self.id = id_
         self.name = name
         self.area = area
         self.requirement = requirement
@@ -28,10 +28,12 @@ class Vacancy:
     def create_objects_vacancy(cls, hh_vacancies):
         if isinstance(hh_vacancies, dict):
             vacancies_list = []
+            vacancies_id_list = []
             for vacancy in hh_vacancies["items"]:
+                vacancies_id_list.append(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
-                vacancies_list.append(cls(id=vacancy["id"],
+                vacancies_list.append(cls(id_=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
                                       requirement=vacancy['snippet']['requirement'],
@@ -41,7 +43,7 @@ class Vacancy:
                                       currency=currency,
                                       employer=vacancy['employer']['name'],
                                       employer_url=vacancy['alternate_url']))
-            return vacancies_list
+            return vacancies_list, vacancies_id_list
         else:
             print('Ошибочный формат файла.')
 
@@ -98,3 +100,7 @@ class Vacancy:
                 f'Требования к соискателю: {self.requirement}\n'
                 f'Круг обязанностей: {self.responsibility}\n'
                 f'Зарплата {sal} {self.currency}')
+
+    @property
+    def get_vacancy_id(self):
+        return self.id
