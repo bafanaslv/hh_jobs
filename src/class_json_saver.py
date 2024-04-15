@@ -6,7 +6,7 @@ class JSONSaver(Connector):
     def save_json_file(self, vacancies, json_file):
         vacancies_json = []
         for vacancy in vacancies:
-            vac_dict = {"idv": vacancy.idv,
+            vacancy_dict = {"id": vacancy.id,
                         "name": vacancy.name,
                         "area": vacancy.area,
                         "requirement": vacancy.requirement,
@@ -14,10 +14,10 @@ class JSONSaver(Connector):
                         "salary_min": vacancy.salary_min,
                         "salary_max": vacancy.salary_max,
                         "currency": vacancy.currency,
-                        "emp_name": vacancy.emp_name,
-                        "emp_url": vacancy.emp_url}
-            vacancies_json.append(vac_dict)
+                        "employer": vacancy.employer,
+                        "employer_url": vacancy.employer_url}
+            vacancies_json.append(vacancy_dict)
 
         with open(json_file, 'w', encoding="UTF-8") as file:
-            vac_json = json.dumps(vacancies_json, ensure_ascii=False, indent=4)
-            file.write(vac_json)
+            vacancy_json = json.dumps(vacancies_json, ensure_ascii=False, indent=4)
+            file.write(vacancy_json)

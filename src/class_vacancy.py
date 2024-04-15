@@ -1,6 +1,6 @@
 class Vacancy:
     """ Класс для работы с вакансиями. """
-    idv: int             # идетификатор вакансии
+    id: int              # идетификатор вакансии
     name: str            # Нименование вакансии
     area: str            # регион где находится вакансия
     requirement: str     # требования к соискателю
@@ -11,9 +11,9 @@ class Vacancy:
     emp_name: str        # работодатель
     emp_url: str         # ссылка на вакансию
 
-    def __init__(self, idv, name, area, requirement, responsibility, salary_max, salary_min,
-                 currency, emp_name, emp_url):
-        self.idv = idv
+    def __init__(self, id, name, area, requirement, responsibility, salary_max, salary_min,
+                 currency, employer, employer_url):
+        self.id = id
         self.name = name
         self.area = area
         self.requirement = requirement
@@ -21,8 +21,8 @@ class Vacancy:
         self.salary_min = salary_min
         self.salary_max = salary_max
         self.currency = currency
-        self.emp_name = emp_name
-        self.emp_url = emp_url
+        self.employer = employer
+        self.employer_url = employer_url
 
     @classmethod
     def create_objects_vacancy(cls, hh_vacancies):
@@ -31,7 +31,7 @@ class Vacancy:
             for vacancy in hh_vacancies["items"]:
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
-                vacancies_list.append(cls(idv=vacancy["id"],
+                vacancies_list.append(cls(id=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
                                       requirement=vacancy['snippet']['requirement'],
@@ -39,8 +39,8 @@ class Vacancy:
                                       salary_min=salary_min,
                                       salary_max=salary_max,
                                       currency=currency,
-                                      emp_name=vacancy['employer']['name'],
-                                      emp_url=vacancy['alternate_url']))
+                                      employer=vacancy['employer']['name'],
+                                      employer_url=vacancy['alternate_url']))
             return vacancies_list
         else:
             print('Ошибочный формат файла.')

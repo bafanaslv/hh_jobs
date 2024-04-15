@@ -4,7 +4,7 @@ from config import ROOT_DIR
 from src.class_json_saver import JSONSaver
 
 URL_GET = "https://api.hh.ru/vacancies"  # адрес для отправки запроса
-PARAMS = {'text': 'oracle', 'area': '113', 'per_page': 100}  # параметры запроса
+PARAMS = {'text': 'oracle', 'area': '113', 'currency': 'RUR', 'per_page': 100}  # параметры запроса
 VACANCIES_FILE = ROOT_DIR+'/data/vacancies.json'  # json-файл с вакансиями
 
 
