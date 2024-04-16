@@ -1,7 +1,6 @@
 from config import ROOT_DIR
 from src.functions import create_json_file
 from src.class_json_saver import JSONSaver
-from src.class_vacancy import Vacancy
 
 VACANCIES_FILE = ROOT_DIR+'/data/vacancies.json'  # json-файл с вакансиями
 MY_VACANCIES_FILE = ROOT_DIR+'/data/my_vacancies.json'  # json-файл с моими вакасиями для добавления
