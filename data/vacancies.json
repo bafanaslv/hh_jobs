@@ -12,7 +12,19 @@
         "employer_url": "https://hh.ru/vacancy/96726292"
     },
     {
-        "id": 96973565,
+        "id": "96973564",
+        "name": "Специалист по обработке данных",
+        "area": "Тверь",
+        "requirement": "Уверенный пользователь MS Excel (желательны навыки работы с формулами и макросами). Опыт работы с большими объемами данных в информационных системах...",
+        "responsibility": "Работа со справочниками в информационной системе (анализ поступающих заявок, подготовка данных к загрузке, создание и настройка новых элементов в <highlighttext>Oracle</highlighttext>). ",
+        "salary_min": 33300,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Компания Русский Свет",
+        "employer_url": "https://hh.ru/vacancy/96973564"
+    },
+    {
+        "id": "96973565",
         "name": "Программист PL/SQL уровня junior",
         "area": "Казань",
         "requirement": "Знание SQL запросов",
@@ -22,5 +34,17 @@
         "currency": "руб.",
         "employer": "Facebook",
         "employer_url": "http:\\www.facebook.com"
+    },
+    {
+        "id": "96973566",
+        "name": "Программист Python уровня middle",
+        "area": "Казань",
+        "requirement": "Все что нужно дле этого уровня должен знать",
+        "responsibility": "Все что нужно дле этого уровня должен уметь, и даже больше",
+        "salary_min": 150000,
+        "salary_max": 250000,
+        "currency": "руб.",
+        "employer": "Колхоз 50 лет без урожая.",
+        "employer_url": "http:\\www.collective.ru"
     }
 ]

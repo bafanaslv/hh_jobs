@@ -1,6 +1,6 @@
 import json
 from src.class_abstract import Connector
-
+from src.class_vacancy import Vacancy
 
 class JSONSaver(Connector):
     @staticmethod
@@ -36,8 +36,9 @@ class JSONSaver(Connector):
         my_vacancies_list = self.load_json_file(my_json_file)
         for new_vacancy in my_vacancies_list:
             max_id += 1
-            new_vacancy["id"] = max_id
+            new_vacancy["id"] = str(max_id)
             vacancies_list.append(new_vacancy)
+            Vacancy.max_id += 1
         self.save_json_file(vacancies_list, json_file)
 
     def del_vacancies(self, area_name, json_file):

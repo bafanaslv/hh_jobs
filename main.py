@@ -25,11 +25,11 @@ if __name__ == '__main__':
         # добавление списка вакансий из моего json - файла
         json_saver.add_vacancies(Vacancy.max_id, MY_VACANCIES_FILE, VACANCIES_FILE)
 
-        # Удаление вакансий определенного региона
-        json_saver.del_vacancies("Тверь", VACANCIES_FILE)
-
-        # Выборка вакансий определенного региона
-        json_saver.select_vacancies("Новый Уренгой", VACANCIES_FILE)
+        # # Удаление вакансий определенного региона
+        # json_saver.del_vacancies("Тверь", VACANCIES_FILE)
+        #
+        # # Выборка вакансий определенного региона
+        # json_saver.select_vacancies("Новый Уренгой", VACANCIES_FILE)
 
     else:
         print(hh_api.get_status_code())
