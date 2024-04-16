@@ -1,17 +1,5 @@
 [
     {
-        "id": "96726292",
-        "name": "Начальник отдела",
-        "area": "Новый Уренгой",
-        "requirement": "Продвинутым пользователь exсel. Является уверенным пользователь <highlighttext>Oracle</highlighttext> Primavera P6. Знание основ выполнения работ строительства объектов. Знание и понимание технологий...",
-        "responsibility": "Организовывать и участвовать в формировании графика производства работ из ПО <highlighttext>Oracle</highlighttext> Primavera P6 для отдельных исполнителей, в том числе...",
-        "salary_min": 250000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "ГСП-2",
-        "employer_url": "https://hh.ru/vacancy/96726292"
-    },
-    {
         "id": "96973564",
         "name": "Специалист по обработке данных",
         "area": "Тверь",
@@ -22,5 +10,17 @@
         "currency": "руб.",
         "employer": "Компания Русский Свет",
         "employer_url": "https://hh.ru/vacancy/96973564"
+    },
+    {
+        "id": "96726292",
+        "name": "Начальник отдела",
+        "area": "Новый Уренгой",
+        "requirement": "Продвинутым пользователь exсel. Является уверенным пользователь <highlighttext>Oracle</highlighttext> Primavera P6. Знание основ выполнения работ строительства объектов. Знание и понимание технологий...",
+        "responsibility": "Организовывать и участвовать в формировании графика производства работ из ПО <highlighttext>Oracle</highlighttext> Primavera P6 для отдельных исполнителей, в том числе...",
+        "salary_min": 250000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "ГСП-2",
+        "employer_url": "https://hh.ru/vacancy/96726292"
     }
 ]
