@@ -6,7 +6,7 @@ class HeadHunterAPI(HHapiABC):
     """ Класс для получения данных с HH."""
     def __init__(self):
         self.url_get = ''
-        self.params = ''
+        self.params = dict
         self.status_code = 0
 
     def get_status_code(self):

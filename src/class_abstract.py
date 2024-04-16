@@ -15,7 +15,7 @@ class HHapiABC(ABC):
         pass
 
 
-class Connector(ABC):
+class JsonManager(ABC):
     @abstractmethod
     def save_json_file(self, vacancies, json_file):
         pass

@@ -11,7 +11,7 @@ class Vacancy:
     employer: str        # работодатель
     employer_url: str    # ссылка на вакансию
 
-    max_id = 0
+    max_id = 0  # максимальный идентификатор вакансии
 
     def __init__(self, id_, name, area, requirement, responsibility, salary_max, salary_min,
                  currency, employer, employer_url):
@@ -27,10 +27,9 @@ class Vacancy:
         self.employer_url = employer_url
 
     @classmethod
-    def create_objects_vacancy(cls, hh_vacancies):
+    def create_objects_vacancy(cls, hh_vacancies, vacancies_list):
         if isinstance(hh_vacancies, dict):
             vac_id = 0
-            vacancies_list = []
             for vacancy in hh_vacancies["items"]:
                 vac_id = int(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
@@ -104,4 +103,6 @@ class Vacancy:
                 f'Регион:   {self.area}\n'
                 f'Требования к соискателю: {self.requirement}\n'
                 f'Круг обязанностей: {self.responsibility}\n'
-                f'Зарплата {sal} {self.currency}')
+                f'Зарплата {sal} {self.currency}\n'
+                f'Работодатель {self.employer}\n'
+                f'Описание вакансии {self.employer_url}\n')

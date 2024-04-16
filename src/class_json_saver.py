@@ -1,8 +1,9 @@
 import json
-from src.class_abstract import Connector
+from src.class_abstract import JsonManager
 from src.class_vacancy import Vacancy
 
-class JSONSaver(Connector):
+
+class JSONSaver(JsonManager):
     @staticmethod
     def create_vacancies_list(vacancies):
         vacancies_list = []
@@ -56,3 +57,7 @@ class JSONSaver(Connector):
             if vacancies_list[i]['area'] == area_name:
                 my_vacancies_list.append(vacancies_list[i])
         self.save_json_file(my_vacancies_list, json_file)
+
+    def print_vacancies(self, vacancies_list):
+        for vacancy in vacancies_list:
+            print(vacancy)
