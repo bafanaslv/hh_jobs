@@ -5,7 +5,7 @@ from src.class_vacancy import Vacancy
 
 VACANCIES_FILE = ROOT_DIR+'/data/vacancies.json'  # json-файл с вакансиями
 MY_VACANCIES_FILE = ROOT_DIR+'/data/my_vacancies.json'  # json-файл с моими вакасиями для добавления
-URL_GET = "https://api.hh.ru/vacancies"  # адрес для отправки запроса
+URL_GET = "https://api.hh.ru/vacancies"  # адрес HH для отправки запроса
 
 if __name__ == '__main__':
     vacancy_name = input(f'Введите поисковый запрос:\n')
@@ -13,10 +13,10 @@ if __name__ == '__main__':
         # параметры запроса
         params = {'text': vacancy_name, 'area': '113', 'currency': 'RUR', 'per_page': 100, 'page': 0}
         page_quantity = 1  # количество выбираемых страниц
-        json_manager = JSONSaver()
         # create_json_file - функция для формирования списка объектов вакансий vacancies_objects_list
         vacancies_objects_list = create_json_file(params, page_quantity, URL_GET)
         # получаем список словарей вакансий vacancies_dict_list в новом усеченном формате
+        json_manager = JSONSaver()
         vacancies_dict_list = json_manager.create_vacancies_list(vacancies_objects_list)
         # сохраняем список словарей вакансий vacancies_dict_list в json - файл VACANCIES_FILE
         json_manager.save_json_file(vacancies_dict_list, VACANCIES_FILE)
@@ -47,5 +47,3 @@ if __name__ == '__main__':
 
     else:
         print('Запрос не введен.')
-
-
