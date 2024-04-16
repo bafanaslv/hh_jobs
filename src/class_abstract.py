@@ -21,13 +21,13 @@ class Connector(ABC):
         pass
 
     @abstractmethod
-    def add_vacancy(self):
+    def add_vacancies(self, max_id, my_json_file, json_file):
         pass
 
     @abstractmethod
-    def del_vacancy(self):
+    def del_vacancies(self, area_name, json_file):
         pass
 
     @abstractmethod
-    def select_vacancies(self):
+    def select_vacancies(self, area_name, json_file):
         pass
