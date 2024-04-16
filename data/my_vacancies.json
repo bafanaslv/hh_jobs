@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "name": "Программист PL/SQL уровня junior",
+        "area": "Казань",
+        "requirement": "Знание SQL запросов",
+        "responsibility": "Знание SQL запросов",
+        "salary_min": 100000,
+        "salary_max": 200000,
+        "currency": "руб.",
+        "employer": "Facebook",
+        "employer_url": "http:\\www.facebook.com"
+    },
+    {
+        "id": "0",
+        "name": "Программист Python уровня middle",
+        "area": "Казань",
+        "requirement": "Все что нужно для этого уровня должен знать.",
+        "responsibility": "Все что нужно для этого уровня должен уметь, и даже больше.",
+        "salary_min": 150000,
+        "salary_max": 250000,
+        "currency": "руб.",
+        "employer": "Колхоз 50 лет без урожая.",
+        "employer_url": "http:\\www.collective.ru"
+    }
+]

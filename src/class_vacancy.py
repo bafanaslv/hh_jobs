@@ -11,6 +11,8 @@ class Vacancy:
     employer: str        # работодатель
     employer_url: str    # ссылка на вакансию
 
+    max_id = 0  # максимальный идентификатор вакансии
+
     def __init__(self, id_, name, area, requirement, responsibility, salary_max, salary_min,
                  currency, employer, employer_url):
         self.id = id_
@@ -25,12 +27,11 @@ class Vacancy:
         self.employer_url = employer_url
 
     @classmethod
-    def create_objects_vacancy(cls, hh_vacancies):
+    def create_objects_vacancy(cls, hh_vacancies, vacancies_list):
         if isinstance(hh_vacancies, dict):
-            vacancies_list = []
-            vacancies_id_list = []
+            vac_id = 0
             for vacancy in hh_vacancies["items"]:
-                vacancies_id_list.append(vacancy["id"])
+                vac_id = int(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
                 vacancies_list.append(cls(id_=vacancy["id"],
@@ -43,7 +44,9 @@ class Vacancy:
                                       currency=currency,
                                       employer=vacancy['employer']['name'],
                                       employer_url=vacancy['alternate_url']))
-            return vacancies_list, vacancies_id_list
+            if vac_id > cls.max_id:
+                cls.max_id = vac_id
+            return vacancies_list
         else:
             print('Ошибочный формат файла.')
 
@@ -95,12 +98,11 @@ class Vacancy:
         elif self.salary_min > 0:
             sal = str(self.salary_min)
 
-        return (f'Вакансия: {self.name}\n'
+        return (f'id: {self.id}\n'
+                f'Вакансия: {self.name}\n'
                 f'Регион:   {self.area}\n'
                 f'Требования к соискателю: {self.requirement}\n'
                 f'Круг обязанностей: {self.responsibility}\n'
-                f'Зарплата {sal} {self.currency}')
-
-    @property
-    def get_vacancy_id(self):
-        return self.id
+                f'Зарплата {sal} {self.currency}\n'
+                f'Работодатель {self.employer}\n'
+                f'Описание вакансии {self.employer_url}\n')

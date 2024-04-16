@@ -1,37 +1,52 @@
-from src.class_hh_api import HeadHunterAPI
-from src.class_vacancy import Vacancy
 from config import ROOT_DIR
+from src.functions import create_json_file
 from src.class_json_saver import JSONSaver
+from src.class_vacancy import Vacancy
 
-URL_GET = "https://api.hh.ru/vacancies"  # адрес для отправки запроса
-PARAMS = {'text': 'oracle', 'area': '113', 'currency': 'RUR', 'per_page': 2}  # параметры запроса
 VACANCIES_FILE = ROOT_DIR+'/data/vacancies.json'  # json-файл с вакансиями
-
+MY_VACANCIES_FILE = ROOT_DIR+'/data/my_vacancies.json'  # json-файл с моими вакасиями для добавления
+URL_GET = "https://api.hh.ru/vacancies"  # адрес HH для отправки запроса
 
 if __name__ == '__main__':
-    # Создание экземпляра класса для работы с API сайтом с вакансиями HeadHater.
-    hh_api = HeadHunterAPI()
+    vacancy_name = input(f'Введите поисковый запрос:\n')
+    if len(vacancy_name) > 0:
+        # параметры запроса
+        params = {'text': vacancy_name, 'area': '113', 'currency': 'RUR', 'per_page': 100, 'page': 0}
+        page_quantity = 1  # количество выбираемых страниц
+        # create_json_file - функция для формирования списка объектов вакансий vacancies_objects_list
+        vacancies_objects_list = create_json_file(params, page_quantity, URL_GET)
+        # получаем список словарей вакансий vacancies_dict_list в новом усеченном формате
+        json_manager = JSONSaver()
+        vacancies_dict_list = json_manager.create_vacancies_list(vacancies_objects_list)
+        # сохраняем список словарей вакансий vacancies_dict_list в json - файл VACANCIES_FILE
+        json_manager.save_json_file(vacancies_dict_list, VACANCIES_FILE)
+        if len(vacancies_dict_list) > 0:
+            print("1.Вывести все\n"
+                  "2.Получить топ N вакансий по зарплате\n"
+                  "3.получить вакансии с ключевым словом в описании\n"
+                  "4.С удалением города")
+            answer = input()
+            if answer not in ['1', '2', '3']:
+                answer = '0'
+            elif answer == '1':
+                json_manager.print_vacancies(vacancies_objects_list)
+                print(f'Найдено {len(vacancies_dict_list)} вакансий.\n')
+                answer = '0'
+            elif answer == '2':
+                # добавление списка вакансий VACANCIES_FILE из моего json - файла MY_VACANCIES_FILE
+                json_manager.add_vacancies(Vacancy.max_id, MY_VACANCIES_FILE, VACANCIES_FILE)
+                answer = '0'
+            elif answer == '3':
+                # Выборка вакансий определенного региона
+                json_manager.select_vacancies("Москва", VACANCIES_FILE)
+                answer = '0'
+            elif answer == '3':
+                # Удаление вакансий определенного региона
+                json_manager.del_vacancies("Москва", VACANCIES_FILE)
+                answer = '0'
 
-    # Получение вакансий с hh.ru в формате JSON
-    hh_vacancies = hh_api.get_vacancies(URL_GET, PARAMS)
-    if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
-        vacancies_objects_list, vacancies_id_list = Vacancy.create_objects_vacancy(hh_vacancies)
-        json_saver = JSONSaver()
-        vacancies_dict_list = json_saver.create_vacancies_list(vacancies_objects_list)
-        json_saver.save_json_file(vacancies_dict_list, VACANCIES_FILE)
-        for vacancy in vacancies_objects_list:
-            print(vacancy)
-            print('')
+        else:
+            print('По запросу ничего не найдено!')
 
-        # Добавление новой вакансии в json - файл.
-        id_vac = int(max(vacancies_id_list)) + 1
-        new_vacancy_object_list = []
-        new_vacancy_object_list.append(Vacancy(id_vac, "Программист PL/SQL уровня junour", "Казань",
-                              "Знание SQL запросов", "Знание SQL запросов",
-                              100000, 200000, "руб.", "Facebook",
-                              "http:\\www.facebook.com"))
-        vacancies_dict_list = json_saver.create_vacancies_list(new_vacancy_object_list)
-#        json_saver.add_vacancy(vacancies_dict_list, VACANCIES_FILE)
-        # print(new_vacancy_object_list[0])
     else:
-        print(hh_api.get_status_code())
+        print('Запрос не введен.')

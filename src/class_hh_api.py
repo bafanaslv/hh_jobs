@@ -5,8 +5,6 @@ import requests
 class HeadHunterAPI(HHapiABC):
     """ Класс для получения данных с HH."""
     def __init__(self):
-        self.url_get = ''
-        self.params = ''
         self.status_code = 0
 
     def get_status_code(self):
@@ -16,7 +14,5 @@ class HeadHunterAPI(HHapiABC):
     def get_vacancies(self, url_get, params):
         """ Получение вакансий с ресурса url_get и возврат их в json-формате. """
         response = requests.get(url_get, params)
-        self.url_get = url_get
-        self.params = params
         self.status_code = response.status_code
         return response.json()
