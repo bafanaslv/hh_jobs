@@ -16,6 +16,7 @@ if __name__ == '__main__':
     # Получение вакансий с hh.ru в формате JSON
     hh_vacancies = hh_api.get_vacancies(URL_GET, PARAMS)
     if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
+        # создание json - файла из выборки HeadHanter.
         vacancies_objects_list = Vacancy.create_objects_vacancy(hh_vacancies)
         json_saver = JSONSaver()
         vacancies_dict_list = json_saver.create_vacancies_list(vacancies_objects_list)
@@ -24,11 +25,11 @@ if __name__ == '__main__':
         # добавление списка вакансий из моего json - файла
         json_saver.add_vacancies(Vacancy.max_id, MY_VACANCIES_FILE, VACANCIES_FILE)
 
-        # Удаление вакансий опреденного региона
+        # Удаление вакансий определенного региона
         json_saver.del_vacancies("Тверь", VACANCIES_FILE)
 
-        # Выбрка вакансий опреденного региона
-        json_saver.select_vacancies("Тверь", VACANCIES_FILE)
+        # Выборка вакансий определенного региона
+        json_saver.select_vacancies("Новый Уренгой", VACANCIES_FILE)
 
     else:
         print(hh_api.get_status_code())

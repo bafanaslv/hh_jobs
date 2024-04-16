@@ -41,12 +41,17 @@ class JSONSaver(Connector):
         self.save_json_file(vacancies_list, json_file)
 
     def del_vacancies(self, area_name, json_file):
+        my_vacancies_list = []
+        vacancies_list = self.load_json_file(json_file)
+        for i in range(len(vacancies_list)):
+            if vacancies_list[i]['area'] != area_name:
+                my_vacancies_list.append(vacancies_list[i])
+        self.save_json_file(my_vacancies_list, json_file)
+
+    def select_vacancies(self, area_name, json_file):
+        my_vacancies_list = []
         vacancies_list = self.load_json_file(json_file)
         for i in range(len(vacancies_list)):
             if vacancies_list[i]['area'] == area_name:
-                del vacancies_list[i]
-                break
-        self.save_json_file(vacancies_list, json_file)
-
-    def select_vacancies(self, area_name, json_file):
-        pass
+                my_vacancies_list.append(vacancies_list[i])
+        self.save_json_file(my_vacancies_list, json_file)
