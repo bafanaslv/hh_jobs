@@ -29,5 +29,12 @@ class JsonManager(ABC):
         pass
 
     @abstractmethod
-    def select_vacancies(self, area_name, json_file):
+    def select_vacancies_by_region(self, vacancies_dict_list, area_name, json_file):
+        pass
+
+    @abstractmethod
+    def select_vacancies_by_word(self, vacancies_dict_list, word, json_file):
+        pass
+
+    def select_vacancies_top_salary(self, vacancies_dict_list, top_n, json_file):
         pass

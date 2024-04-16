@@ -50,14 +50,26 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_list[i])
         self.save_json_file(my_vacancies_list, json_file)
 
-    def select_vacancies(self, area_name, json_file):
-        my_vacancies_list = []
-        vacancies_list = self.load_json_file(json_file)
-        for i in range(len(vacancies_list)):
-            if vacancies_list[i]['area'] == area_name:
-                my_vacancies_list.append(vacancies_list[i])
-        self.save_json_file(my_vacancies_list, json_file)
+    def select_vacancies_top_salary(self, vacancies_dict_list, top_n, json_file):
+        pass
 
-    def print_vacancies(self, vacancies_list):
+    def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file):
+        my_vacancies_list = []
+        for i in range(len(vacancies_objects_list)):
+            if vacancies_objects_list[i].area == area_name:
+                my_vacancies_list.append(vacancies_objects_list[i])
+        print(self.print_vacancies(my_vacancies_list))
+        print(f'Найдено {len(my_vacancies_list)} вакансий.\n')
+
+    def select_vacancies_by_word(self, vacancies_objects_list, word, json_file):
+        my_vacancies_list = []
+        for i in range(len(vacancies_objects_list)):
+            if word in vacancies_objects_list[i].requirement or word in vacancies_objects_list[i].responsibility:
+                my_vacancies_list.append(vacancies_objects_list[i])
+        print(self.print_vacancies(my_vacancies_list))
+        print(f'Найдено {len(my_vacancies_list)} вакансий.\n')
+
+    @staticmethod
+    def print_vacancies(vacancies_list):
         for vacancy in vacancies_list:
             print(vacancy)
