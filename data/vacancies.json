@@ -22,5 +22,17 @@
         "currency": "руб.",
         "employer": "Компания Русский Свет",
         "employer_url": "https://hh.ru/vacancy/96973564"
+    },
+    {
+        "id": 96973565,
+        "name": "Программист PL/SQL уровня junior",
+        "area": "Казань",
+        "requirement": "Знание SQL запросов",
+        "responsibility": "Знание SQL запросов",
+        "salary_min": 100000,
+        "salary_max": 200000,
+        "currency": "руб.",
+        "employer": "Facebook",
+        "employer_url": "http:\\www.facebook.com"
     }
 ]

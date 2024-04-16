@@ -28,9 +28,7 @@ class Vacancy:
     def create_objects_vacancy(cls, hh_vacancies):
         if isinstance(hh_vacancies, dict):
             vacancies_list = []
-            vacancies_id_list = []
             for vacancy in hh_vacancies["items"]:
-                vacancies_id_list.append(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
                 vacancies_list.append(cls(id_=vacancy["id"],
@@ -43,7 +41,7 @@ class Vacancy:
                                       currency=currency,
                                       employer=vacancy['employer']['name'],
                                       employer_url=vacancy['alternate_url']))
-            return vacancies_list, vacancies_id_list
+            return vacancies_list
         else:
             print('Ошибочный формат файла.')
 
@@ -95,12 +93,9 @@ class Vacancy:
         elif self.salary_min > 0:
             sal = str(self.salary_min)
 
-        return (f'Вакансия: {self.name}\n'
+        return (f'id: {self.id}\n'
+                f'Вакансия: {self.name}\n'
                 f'Регион:   {self.area}\n'
                 f'Требования к соискателю: {self.requirement}\n'
                 f'Круг обязанностей: {self.responsibility}\n'
                 f'Зарплата {sal} {self.currency}')
-
-    @property
-    def get_vacancy_id(self):
-        return self.id

@@ -15,23 +15,28 @@ if __name__ == '__main__':
     # Получение вакансий с hh.ru в формате JSON
     hh_vacancies = hh_api.get_vacancies(URL_GET, PARAMS)
     if hh_api.get_status_code() == 200:  # если запрос прошел удачно, то идем дальше.
-        vacancies_objects_list, vacancies_id_list = Vacancy.create_objects_vacancy(hh_vacancies)
+        vacancies_objects_list = Vacancy.create_objects_vacancy(hh_vacancies)
         json_saver = JSONSaver()
-        vacancies_dict_list = json_saver.create_vacancies_list(vacancies_objects_list)
+        vacancies_dict_list, vacancy_max_id  = json_saver.create_vacancies_list(vacancies_objects_list)
         json_saver.save_json_file(vacancies_dict_list, VACANCIES_FILE)
         for vacancy in vacancies_objects_list:
             print(vacancy)
             print('')
 
         # Добавление новой вакансии в json - файл.
-        id_vac = int(max(vacancies_id_list)) + 1
-        new_vacancy_object_list = []
-        new_vacancy_object_list.append(Vacancy(id_vac, "Программист PL/SQL уровня junour", "Казань",
-                              "Знание SQL запросов", "Знание SQL запросов",
-                              100000, 200000, "руб.", "Facebook",
-                              "http:\\www.facebook.com"))
-        vacancies_dict_list = json_saver.create_vacancies_list(new_vacancy_object_list)
-#        json_saver.add_vacancy(vacancies_dict_list, VACANCIES_FILE)
-        # print(new_vacancy_object_list[0])
+        new_vacancy_dict = {"id": vacancy_max_id,
+                            "name": "Программист PL/SQL уровня junior",
+                            "area": "Казань",
+                            "requirement": "Знание SQL запросов",
+                            "responsibility": "Знание SQL запросов",
+                            "salary_min": 100000,
+                            "salary_max": 200000,
+                            "currency": "руб.",
+                            "employer": "Facebook",
+                            "employer_url": "http:\\www.facebook.com"}
+
+        vacancy_objects_list = json_saver.add_vacancy(new_vacancy_dict, VACANCIES_FILE)
+#        vacancies_dict_list = json_saver.create_vacancies_list(vacancies_objects_list)
+#        json_saver.save_json_file(vacancies_dict_list, VACANCIES_FILE)
     else:
         print(hh_api.get_status_code())
