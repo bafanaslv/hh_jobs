@@ -21,7 +21,10 @@ if __name__ == '__main__':
         # сохраняем список словарей вакансий vacancies_dict_list в json - файл VACANCIES_FILE
         json_manager.save_json_file(vacancies_dict_list, VACANCIES_FILE)
         if len(vacancies_dict_list) > 0:
-            print("1.Вывести все\n2.Сохранить с добавлением своих вакансий\n3.Выбор по городу\n4.С удалением города")
+            print("1.Вывести все\n"
+                  "2.Получить топ N вакансий по зарплате\n"
+                  "3.получить вакансии с ключевым словом в описании\n"
+                  "4.С удалением города")
             answer = input()
             if answer not in ['1', '2', '3']:
                 answer = '0'
