@@ -37,7 +37,7 @@ class JSONSaver(JsonManager):
         with open(json_file, 'r', encoding='utf-8') as file:
             return json.load(file)
 
-    def add_vacancies(self, max_id, my_json_file, json_file):
+    def add_vacancies(self, max_id, json_file, my_json_file):
         vacancies_list = self.load_json_file(json_file)
         my_vacancies_list = self.load_json_file(my_json_file)
         for new_vacancy in my_vacancies_list:
