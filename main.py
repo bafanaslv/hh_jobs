@@ -1,5 +1,5 @@
 from config import ROOT_DIR
-from src.functions import create_json_file
+from src.functions import create_vacancies_list
 from src.class_json_saver import JSONSaver
 
 VACANCIES_FILE = ROOT_DIR+'/data/vacancies.json'  # json-файл с вакансиями
@@ -13,7 +13,7 @@ if __name__ == '__main__':
         params = {'text': vacancy_name, 'area': '113', 'currency': 'RUR', 'per_page': 100, 'page': 0}
         page_quantity = 2  # количество выбираемых страниц
         # create_json_file - функция для формирования списка объектов вакансий vacancies_objects_list
-        vacancies_objects_list = create_json_file(params, page_quantity, URL_GET)
+        vacancies_objects_list = create_vacancies_list(params, page_quantity, URL_GET)
         # получаем список словарей вакансий vacancies_dict_list в новом усеченном формате
         json_manager = JSONSaver()
         vacancies_dict_list = json_manager.create_vacancies_list(vacancies_objects_list)

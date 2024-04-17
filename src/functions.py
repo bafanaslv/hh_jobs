@@ -2,7 +2,7 @@ from src.class_hh_api import HeadHunterAPI
 from src.class_vacancy import Vacancy
 
 
-def create_json_file(params, page_quantity, url):
+def create_vacancies_list(params, page_quantity, url):
     # Создание экземпляра класса для работы с API сайтом с вакансиями HeadHater.
     hh_api = HeadHunterAPI()
     # Получение вакансий с hh.ru в формате JSON
