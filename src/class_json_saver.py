@@ -5,11 +5,10 @@ from src.class_vacancy import Vacancy
 
 class JSONSaver(JsonManager):
     def __init__(self, vacancies_objects_list, json_file):
-        self.vacancies_objects_list = vacancies_objects_list
-        self.json_file = json_file
-        self.create_vacancies_list(vacancies_objects_list, json_file)
+        self.create_vacancies_list(vacancies_objects_list, json_file)  # подготовка списка вакансий
 
     def create_vacancies_list(self, vacancies, json_file):
+        """Подготовка списка словарей вакансий из json-файла."""
         my_vacancies_list = []
         for vacancy in vacancies:
             vacancy_dict = {"id": vacancy.idv,
@@ -23,12 +22,13 @@ class JSONSaver(JsonManager):
                             "employer": vacancy.employer,
                             "employer_url": vacancy.employer_url}
             my_vacancies_list.append(vacancy_dict)
-        self.save_json_file(my_vacancies_list, json_file)
+        self.save_json_file(my_vacancies_list, json_file)  # запись в json-файл
         return my_vacancies_list
 
-    def save_json_file(self, vacancies_list, json_file):
+    def save_json_file(self, vacancies_dict_list, json_file):
+        """Запись в json-файл."""
         with open(json_file, 'w', encoding="UTF-8") as file:
-            vacancy_json = json.dumps(vacancies_list, ensure_ascii=False, indent=4)
+            vacancy_json = json.dumps(vacancies_dict_list, ensure_ascii=False, indent=4)
             file.write(vacancy_json)
 
     @staticmethod
@@ -38,6 +38,7 @@ class JSONSaver(JsonManager):
             return json.load(file)
 
     def add_vacancies(self, max_id, json_file, my_json_file):
+        """Добавление в json-файл вакакнсий находящихся в json-файле my_json_file."""
         vacancies_list = self.load_json_file(json_file)
         my_vacancies_list = self.load_json_file(my_json_file)
         for new_vacancy in my_vacancies_list:
@@ -48,6 +49,7 @@ class JSONSaver(JsonManager):
         self.save_json_file(vacancies_list, json_file)
 
     def del_vacancies(self, area_name, json_file):
+        """Удаление из json-файла с ненужных вакансий региона area_name."""
         my_vacancies_list = []
         vacancies_list = self.load_json_file(json_file)
         for i in range(len(vacancies_list)):
@@ -56,11 +58,14 @@ class JSONSaver(JsonManager):
         self.save_json_file(my_vacancies_list, json_file)
 
     def vacancies_top_salary(self, vacancies_dict_list, top_n, json_file, answer):
+        """Выборка топ top_n по зарплате. По нижней или верхней границе в зависимости от того какую опцию выбрал
+        пользователь. answer == '2' - по минимальной, answer == '3' по максимальной"""
+        # предварительная сотрировка по убыванию размера зарплаты
         if answer == '2':
             vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_min, reverse=True)
         else:
             vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_max, reverse=True)
-
+        # Фильтрация топ top_n вакансий или сколько выбралось.
         my_vacancies_list = []
         if len(vacancies_dict_list) < int(top_n):
             top = len(vacancies_dict_list)
@@ -72,10 +77,42 @@ class JSONSaver(JsonManager):
             i += 1
         return my_vacancies_list
 
-    def vacancies_range_salary(self, vacancies_dict_list, top_n, json_file, answer):
-        pass
+    def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file):
+        """Выборка по дипазону зарплаты. Объект vac_object явлется эталоном для сравнения.
+        Выборка считается удочной, если верхняя и нижняя зарплаты входят в дипазан или если верхняя или нижняя
+        входят в дипазон в случае когда ее пара не указана."""
+        my_vacancies_list = []
+        for i in range(len(vacancies_objects_list)):
+            if self.__lte__(vacancies_objects_list[i], vac_obj) and self.__gte__(vacancies_objects_list[i], vac_obj):
+                my_vacancies_list.append(vacancies_objects_list[i])
+        return my_vacancies_list
+
+    @staticmethod
+    def __lte__(vacancy, other):
+        """Сравнение вхождения в диапазон нижней зарплаты. Если она не указана,
+        то проверяем вхождение в дипазон верхней зарплаты."""
+        if isinstance(other, Vacancy):
+            if vacancy.salary_min > 0:
+                return other.salary_min <= vacancy.salary_min <= other.salary_max
+            else:
+                if vacancy.salary_max > 0:
+                    return other.salary_min <= vacancy.salary_max <= other.salary_max
+        return False
+
+    @staticmethod
+    def __gte__(vacancy, other):
+        """Сравнение вхождения в диапазон верхней зарплаты. Если она не указана,
+        то проверяем вхождение в дипазон нижней зарплаты."""
+        if isinstance(other, Vacancy):
+            if vacancy.salary_max > 0:
+                return other.salary_min <= vacancy.salary_max <= other.salary_max
+            else:
+                if vacancy.salary_min > 0:
+                    return other.salary_min <= vacancy.salary_min <= other.salary_max
+        return False
 
     def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file):
+        """Из списка объектов берем только если регион area_name совпадает с введенным."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if vacancies_objects_list[i].area == area_name:
@@ -83,6 +120,8 @@ class JSONSaver(JsonManager):
         return my_vacancies_list
 
     def select_vacancies_by_word(self, vacancies_objects_list, word, json_file):
+        """Из списка объектов берем только, если ключевое слово найдено
+        в требованиях к соискателю или в должностных обязанностях."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if word in vacancies_objects_list[i].requirement or word in vacancies_objects_list[i].responsibility:
@@ -91,6 +130,7 @@ class JSONSaver(JsonManager):
 
     @staticmethod
     def print_vacancies(vacancies_dict_list):
+        """ Вывод выбранных вакансий."""
         for vacancy in vacancies_dict_list:
             print(vacancy)
         print(f'Найдено {len(vacancies_dict_list)} вакансий.\n')

@@ -50,13 +50,20 @@ def users_menu():
                     print('Необходимо ввести целое положительное число.')
             elif answer == '4':
                 # Выборка вакансий по дипазону зарплат.
-                text = input(f'Введите количество топ вакансий по зарплате:\n')
-                if text.isdigit():
-                    sel_obj_list = json_manager.vacancies_range_salary(vacancies_objects_list, text, JSON_FILE,
-                                                                     answer)
+                sal_min = input(f'Введите минимальную зарплату:\n')
+                sal_max = input(f'Введите максимальную зарплату:\n')
+                if sal_min.isdigit() and sal_max.isdigit() and int(sal_max) > int(sal_min):
+                    # vac_object - объект-шаблон вакансия для сравнения зарплат.
+                    vac_object = Vacancy("0", "Программист", "Казань", "Все",
+                                         "И даже больше", int(sal_min), int(sal_max),
+                                         "руб.", "Facebook", "httos:\\www.facebook.com")
+                    sel_obj_list = json_manager.vacancies_range_salary(vacancies_objects_list, vac_object, JSON_FILE)
                     json_manager.print_vacancies(sel_obj_list)
                 else:
-                    print('Необходимо ввести целое положительное число.')
+                    if int(sal_max) <= int(sal_min):
+                        print('Введен неверный диапазон зарплаты.')
+                    else:
+                        print('Необходимо ввести целое положительное число.')
             elif answer == '5':
                 # Выборка вакансий по региону и вывод.
                 text = input(f'Введите нименование региона:\n')

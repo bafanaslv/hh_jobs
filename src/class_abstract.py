@@ -17,7 +17,7 @@ class HHapiABC(ABC):
 
 class JsonManager(ABC):
     @abstractmethod
-    def __init__(self, vacancies_objects_list, json_file):
+    def __init__(self):
         pass
 
     @abstractmethod
@@ -40,5 +40,10 @@ class JsonManager(ABC):
     def select_vacancies_by_word(self, vacancies_dict_list, word, json_file):
         pass
 
+    @abstractmethod
     def vacancies_top_salary(self, vacancies_dict_list, top_n, json_file, answer):
+        pass
+
+    @abstractmethod
+    def vacancies_range_salary(self, vacancies_objects_list, vac_object, json_file):
         pass

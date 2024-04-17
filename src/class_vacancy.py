@@ -4,7 +4,7 @@ class Vacancy:
     name: str            # наименование вакансии
     area: str            # регион где находится вакансия
     requirement: str     # требования к соискателю
-    responsibility: str  # круг обязанностей
+    responsibility: str  # долностные обязанности
     salary_min: int      # мминимальная зарплата
     salary_max: int      # максимальная зарплата
     currency: str        # валюта зарплаты
@@ -13,7 +13,7 @@ class Vacancy:
 
     max_id = 0  # максимальный идентификатор вакансии
 
-    def __init__(self, id, name, area, requirement, responsibility, salary_max, salary_min,
+    def __init__(self, id, name, area, requirement, responsibility, salary_min, salary_max,
                  currency, employer, employer_url):
         self.idv = id
         self.name = name
@@ -28,6 +28,7 @@ class Vacancy:
 
     @classmethod
     def create_objects_vacancy(cls, hh_vacancies, vacancies_list):
+        """Метод для создания списка объектов вакансий из списка словарей полученных с HH hh_vacancies."""
         if isinstance(hh_vacancies, dict):
             vac_id = 0
             for vacancy in hh_vacancies["items"]:
@@ -44,6 +45,8 @@ class Vacancy:
                                       currency=currency,
                                       employer=vacancy['employer']['name'],
                                       employer_url=vacancy['alternate_url']))
+            # по мере формирование словаря vacancies_list выявляется максимальных номер id вакансии.
+            # он нам нужен при добаволении новых вакансий для избежания повторения id.
             if vac_id > cls.max_id:
                 cls.max_id = vac_id
             return vacancies_list
@@ -52,6 +55,7 @@ class Vacancy:
 
     @staticmethod
     def responsibility_valid(responsibility_item):
+        """Валидация должностных обязанностей."""
         if not responsibility_item:
             return ''
         else:
@@ -62,6 +66,7 @@ class Vacancy:
 
     @staticmethod
     def salary_valid(salary_item):
+        """Валидация зарплаты и валюты."""
         if salary_item is None:
             salary_min = 0
             salary_max = 0
@@ -88,6 +93,7 @@ class Vacancy:
         return salary_min, salary_max, currency
 
     def __str__(self):
+        """Подготовка строк вакансий для вывода."""
         sal = ''
         if self.salary_min == 0 and self.salary_max == 0:
             sal = 'не указана'
