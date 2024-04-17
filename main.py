@@ -68,7 +68,7 @@ def users_menu():
                 text = input(f'Введите нименование региона, который хотите удалить из json-файла:\n')
                 if len(text):
                     json_manager.del_vacancies(text, JSON_FILE)
-                    print('Файл vacancies.json изменен и сохранен.')
+                    print('К файлу vacancies.json добавлен my_vacancies.json.')
                 else:
                     print('Регион для удаления не введен.')
             elif answer == '7':
