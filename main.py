@@ -44,7 +44,7 @@ if __name__ == '__main__':
                 json_manager.print_vacancies(sel_obj_list)
             elif answer == '5':
                 # Выборка вакансий по ключевому слову и вывод.
-                vacancy_text = input(f'Введите нименование региона:\n')
+                vacancy_text = input(f'Введите ключевое слово:\n')
                 sel_obj_list = json_manager.select_vacancies_by_word(vacancies_objects_list, vacancy_text, VACANCIES_FILE)
                 json_manager.print_vacancies(sel_obj_list)
         else:
