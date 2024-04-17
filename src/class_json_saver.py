@@ -33,7 +33,7 @@ class JSONSaver(JsonManager):
 
     @staticmethod
     def load_json_file(json_file):
-        """Загрузка json - файла."""
+        """Загрузка json-файла."""
         with open(json_file, 'r', encoding='utf-8') as file:
             return json.load(file)
 
@@ -55,28 +55,32 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_list[i])
         self.save_json_file(my_vacancies_list, json_file)
 
-    def select_vacancies_top_salary(self, vacancies_dict_list, top_n, json_file):
-        vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_min, reverse=True)
+    def vacancies_top_salary(self, vacancies_dict_list, top_n, json_file, answer):
+        if answer == '2':
+            vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_min, reverse=True)
+        else:
+            vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_max, reverse=True)
+
         my_vacancies_list = []
         i = 0
         while i < top_n:
             my_vacancies_list.append(vacancies_dict_list[i])
             i += 1
-        print(self.print_vacancies(my_vacancies_list))
+        return my_vacancies_list
 
     def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file):
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if vacancies_objects_list[i].area == area_name:
                 my_vacancies_list.append(vacancies_objects_list[i])
-        print(self.print_vacancies(my_vacancies_list))
+        return my_vacancies_list
 
     def select_vacancies_by_word(self, vacancies_objects_list, word, json_file):
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if word in vacancies_objects_list[i].requirement or word in vacancies_objects_list[i].responsibility:
                 my_vacancies_list.append(vacancies_objects_list[i])
-        print(self.print_vacancies(my_vacancies_list))
+        return my_vacancies_list
 
     @staticmethod
     def print_vacancies(vacancies_dict_list):

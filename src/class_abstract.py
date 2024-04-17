@@ -40,5 +40,5 @@ class JsonManager(ABC):
     def select_vacancies_by_word(self, vacancies_dict_list, word, json_file):
         pass
 
-    def select_vacancies_top_salary(self, vacancies_dict_list, top_n, json_file):
+    def vacancies_top_salary(self, vacancies_dict_list, top_n, json_file, answer):
         pass
