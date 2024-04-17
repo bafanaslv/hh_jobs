@@ -12,7 +12,7 @@ class JSONSaver(JsonManager):
     def create_vacancies_list(self, vacancies, json_file):
         my_vacancies_list = []
         for vacancy in vacancies:
-            vacancy_dict = {"id": vacancy.id,
+            vacancy_dict = {"id": vacancy.idv,
                             "name": vacancy.name,
                             "area": vacancy.area,
                             "requirement": vacancy.requirement,
@@ -86,7 +86,8 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_objects_list[i])
         return my_vacancies_list
 
-    def print_vacancies(self, vacancies_dict_list):
+    @staticmethod
+    def print_vacancies(vacancies_dict_list):
         for vacancy in vacancies_dict_list:
             print(vacancy)
         print(f'Найдено {len(vacancies_dict_list)} вакансий.\n')

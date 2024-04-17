@@ -1,6 +1,6 @@
 class Vacancy:
     """ Класс для работы с вакансиями. """
-    id: int              # идентификатор вакансии
+    idv: int             # идентификатор вакансии
     name: str            # наименование вакансии
     area: str            # регион где находится вакансия
     requirement: str     # требования к соискателю
@@ -13,9 +13,9 @@ class Vacancy:
 
     max_id = 0  # максимальный идентификатор вакансии
 
-    def __init__(self, id_, name, area, requirement, responsibility, salary_max, salary_min,
+    def __init__(self, id, name, area, requirement, responsibility, salary_max, salary_min,
                  currency, employer, employer_url):
-        self.id = id_
+        self.idv = id
         self.name = name
         self.area = area
         self.requirement = requirement
@@ -34,7 +34,7 @@ class Vacancy:
                 vac_id = int(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
-                vacancies_list.append(cls(id_=vacancy["id"],
+                vacancies_list.append(cls(id=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
                                       requirement=vacancy['snippet']['requirement'],
@@ -98,7 +98,7 @@ class Vacancy:
         elif self.salary_min > 0:
             sal = str(self.salary_min)
 
-        return (f'id: {self.id}\n'
+        return (f'id: {self.idv}\n'
                 f'Вакансия: {self.name}\n'
                 f'Регион:   {self.area}\n'
                 f'Требования к соискателю: {self.requirement}\n'

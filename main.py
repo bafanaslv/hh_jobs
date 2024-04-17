@@ -20,8 +20,8 @@ def users_menu():
         # create_vacancies_list - функция для формирования списка объектов вакансий vacancies_objects_list
         vacancies_objects_list = create_vacancies_list(params, int(page_quantity), URL_GET)
 
-        # Создаем объект manager и одновременно получаем список словарей вакансий в новом усеченном формате
-        # и сохраняем его а json-файле VACANCIES_FILE
+        # Создаем объект manager и одновременно получаем список словарей вакансий в новом усеченном формате и
+        # сохраняем его а json-файле JSON_FILE
         json_manager = JSONSaver(vacancies_objects_list, JSON_FILE)
 
         if len(vacancies_objects_list) > 0:
