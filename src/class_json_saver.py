@@ -62,8 +62,12 @@ class JSONSaver(JsonManager):
             vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_max, reverse=True)
 
         my_vacancies_list = []
+        if len(vacancies_dict_list) < int(top_n):
+            top = len(vacancies_dict_list)
+        else:
+            top = int(top_n)
         i = 0
-        while i < top_n:
+        while i < top:
             my_vacancies_list.append(vacancies_dict_list[i])
             i += 1
         return my_vacancies_list
@@ -82,8 +86,7 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_objects_list[i])
         return my_vacancies_list
 
-    @staticmethod
-    def print_vacancies(vacancies_dict_list):
+    def print_vacancies(self, vacancies_dict_list):
         for vacancy in vacancies_dict_list:
             print(vacancy)
         print(f'Найдено {len(vacancies_dict_list)} вакансий.\n')
