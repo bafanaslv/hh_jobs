@@ -28,7 +28,7 @@ class Vacancy:
 
     @classmethod
     def create_objects_vacancy(cls, hh_vacancies, vacancies_list):
-        """Метод для создания списка объектов вакансий из списка словарей полученных с HH hh_vacancies."""
+        """Метод для создания списка объектов вакансий из списка словарей полученных с HeadHanter hh_vacancies."""
         if isinstance(hh_vacancies, dict):
             vac_id = 0
             for vacancy in hh_vacancies["items"]:

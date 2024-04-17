@@ -12,18 +12,6 @@
         "employer_url": "https://hh.ru/vacancy/97117960"
     },
     {
-        "id": "96726292",
-        "name": "Начальник отдела",
-        "area": "Новый Уренгой",
-        "requirement": "Продвинутым пользователь exсel. Является уверенным пользователь <highlighttext>Oracle</highlighttext> Primavera P6. Знание основ выполнения работ строительства объектов. Знание и понимание технологий...",
-        "responsibility": "Организовывать и участвовать в формировании графика производства работ из ПО <highlighttext>Oracle</highlighttext> Primavera P6 для отдельных исполнителей, в том числе...",
-        "salary_min": 250000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "ГСП-2",
-        "employer_url": "https://hh.ru/vacancy/96726292"
-    },
-    {
         "id": "97149209",
         "name": "Manual QA Engineer",
         "area": "Москва",
@@ -34,6 +22,18 @@
         "currency": "",
         "employer": "Right Line",
         "employer_url": "https://hh.ru/vacancy/97149209"
+    },
+    {
+        "id": "96726292",
+        "name": "Начальник отдела",
+        "area": "Новый Уренгой",
+        "requirement": "Продвинутым пользователь exсel. Является уверенным пользователь <highlighttext>Oracle</highlighttext> Primavera P6. Знание основ выполнения работ строительства объектов. Знание и понимание технологий...",
+        "responsibility": "Организовывать и участвовать в формировании графика производства работ из ПО <highlighttext>Oracle</highlighttext> Primavera P6 для отдельных исполнителей, в том числе...",
+        "salary_min": 250000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "ГСП-2",
+        "employer_url": "https://hh.ru/vacancy/96726292"
     },
     {
         "id": "97219777",
@@ -108,30 +108,6 @@
         "employer_url": "https://hh.ru/vacancy/97006853"
     },
     {
-        "id": "93889237",
-        "name": "Стажер-программист Java",
-        "area": "Москва",
-        "requirement": "Основы работы с базами данных СУБД (MS SQL Server <highlighttext>Oracle</highlighttext>, MySQL). Опытный пользователь ПК. Желательно: Опыт работы ОС Windows Server. ",
-        "responsibility": "Разработка приложений микросервисной архитектуры на Java. Ведение задач в Jira.",
-        "salary_min": 70000,
-        "salary_max": 80000,
-        "currency": "руб.",
-        "employer": "ББРК",
-        "employer_url": "https://hh.ru/vacancy/93889237"
-    },
-    {
-        "id": "96533718",
-        "name": "Junior программист",
-        "area": "Оренбург",
-        "requirement": "Понимание основ программирования и знание хотя бы одного из перечисленных языков программирования: С#, Delphi, C++. Желание и умение учиться новым...",
-        "responsibility": "Разработка приложений для IOS и Android с использованием Xamarin/MAUI. Разработка нового и доработка существующего функционала на <highlighttext>Oracle</highlighttext> PL/SQL. ",
-        "salary_min": 50000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "Система Город",
-        "employer_url": "https://hh.ru/vacancy/96533718"
-    },
-    {
         "id": "97124725",
         "name": "Системный администратор",
         "area": "Чебоксары",
@@ -156,6 +132,30 @@
         "employer_url": "https://hh.ru/vacancy/90993274"
     },
     {
+        "id": "96533718",
+        "name": "Junior программист",
+        "area": "Оренбург",
+        "requirement": "Понимание основ программирования и знание хотя бы одного из перечисленных языков программирования: С#, Delphi, C++. Желание и умение учиться новым...",
+        "responsibility": "Разработка приложений для IOS и Android с использованием Xamarin/MAUI. Разработка нового и доработка существующего функционала на <highlighttext>Oracle</highlighttext> PL/SQL. ",
+        "salary_min": 50000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Система Город",
+        "employer_url": "https://hh.ru/vacancy/96533718"
+    },
+    {
+        "id": "93889237",
+        "name": "Стажер-программист Java",
+        "area": "Москва",
+        "requirement": "Основы работы с базами данных СУБД (MS SQL Server <highlighttext>Oracle</highlighttext>, MySQL). Опытный пользователь ПК. Желательно: Опыт работы ОС Windows Server. ",
+        "responsibility": "Разработка приложений микросервисной архитектуры на Java. Ведение задач в Jira.",
+        "salary_min": 70000,
+        "salary_max": 80000,
+        "currency": "руб.",
+        "employer": "ББРК",
+        "employer_url": "https://hh.ru/vacancy/93889237"
+    },
+    {
         "id": "97048951",
         "name": "Java разработчик",
         "area": "Санкт-Петербург",
@@ -168,18 +168,6 @@
         "employer_url": "https://hh.ru/vacancy/97048951"
     },
     {
-        "id": "88474606",
-        "name": "Middle Java Developer",
-        "area": "Москва",
-        "requirement": "Уверенное владение Spring. Умение работать с базами данных (<highlighttext>Oracle</highlighttext>, PostgreSQL). Знание паттернов проектирования ПО. Опыт разработки web-сервисов на основе...",
-        "responsibility": "Участие в проекте в роли разработчика. Проектирование технический решений и оценка трудозатрат. Разработка интеграционных решений. Разработка новой функциональности в соответствии...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "ИЦ АЙ-ТЕКО",
-        "employer_url": "https://hh.ru/vacancy/88474606"
-    },
-    {
         "id": "96391179",
         "name": "Программист-стажер",
         "area": "Москва",
@@ -190,6 +178,18 @@
         "currency": "руб.",
         "employer": "ГЕТСИЭРЭМ",
         "employer_url": "https://hh.ru/vacancy/96391179"
+    },
+    {
+        "id": "88474606",
+        "name": "Middle Java Developer",
+        "area": "Москва",
+        "requirement": "Уверенное владение Spring. Умение работать с базами данных (<highlighttext>Oracle</highlighttext>, PostgreSQL). Знание паттернов проектирования ПО. Опыт разработки web-сервисов на основе...",
+        "responsibility": "Участие в проекте в роли разработчика. Проектирование технический решений и оценка трудозатрат. Разработка интеграционных решений. Разработка новой функциональности в соответствии...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "ИЦ АЙ-ТЕКО",
+        "employer_url": "https://hh.ru/vacancy/88474606"
     },
     {
         "id": "95891993",
@@ -228,18 +228,6 @@
         "employer_url": "https://hh.ru/vacancy/95721229"
     },
     {
-        "id": "96809007",
-        "name": "QA Engineer / Тестировщик",
-        "area": "Санкт-Петербург",
-        "requirement": "Опыт ручного и автоматического тестирования. Опыт тестирования клиент-серверных систем. Понимание методологии разработки и жизненного цикла ПО. Понимание методологии тестирования...",
-        "responsibility": "Ручное тестирование web-приложения. Написание автоматических тестов. Создание и актуализация тест-планов и тест-кейсов. Исследовательское тестирование, моделирование проблем пользователей. ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "ЯСП",
-        "employer_url": "https://hh.ru/vacancy/96809007"
-    },
-    {
         "id": "97143444",
         "name": "Инженер (уровень junior)",
         "area": "Москва",
@@ -250,6 +238,18 @@
         "currency": "",
         "employer": "Data World",
         "employer_url": "https://hh.ru/vacancy/97143444"
+    },
+    {
+        "id": "96809007",
+        "name": "QA Engineer / Тестировщик",
+        "area": "Санкт-Петербург",
+        "requirement": "Опыт ручного и автоматического тестирования. Опыт тестирования клиент-серверных систем. Понимание методологии разработки и жизненного цикла ПО. Понимание методологии тестирования...",
+        "responsibility": "Ручное тестирование web-приложения. Написание автоматических тестов. Создание и актуализация тест-планов и тест-кейсов. Исследовательское тестирование, моделирование проблем пользователей. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "ЯСП",
+        "employer_url": "https://hh.ru/vacancy/96809007"
     },
     {
         "id": "96983792",
@@ -288,18 +288,6 @@
         "employer_url": "https://hh.ru/vacancy/96832630"
     },
     {
-        "id": "95714976",
-        "name": "Специалист по планированию и бюджетированию",
-        "area": "Москва",
-        "requirement": "Опытный пользователь POWER POINT. Знание 1С Бухгалтерия 8.3. Умение работать в <highlighttext>Oracle</highlighttext> Hyperion Financial Management (предпочтительно).",
-        "responsibility": "Загрузка данных бухгалтерского учета в <highlighttext>Oracle</highlighttext> Hyperion Financial Management на ежемесячной основе. Трансформация бухгалтерской отчетности по стандартам МСФО в <highlighttext>Oracle</highlighttext>...",
-        "salary_min": 120000,
-        "salary_max": 145000,
-        "currency": "руб.",
-        "employer": "ТЕЛЕБАЗИС",
-        "employer_url": "https://hh.ru/vacancy/95714976"
-    },
-    {
         "id": "95520595",
         "name": "Программист-стажер",
         "area": "Москва",
@@ -310,6 +298,18 @@
         "currency": "руб.",
         "employer": "ИАТВТ",
         "employer_url": "https://hh.ru/vacancy/95520595"
+    },
+    {
+        "id": "95714976",
+        "name": "Специалист по планированию и бюджетированию",
+        "area": "Москва",
+        "requirement": "Опытный пользователь POWER POINT. Знание 1С Бухгалтерия 8.3. Умение работать в <highlighttext>Oracle</highlighttext> Hyperion Financial Management (предпочтительно).",
+        "responsibility": "Загрузка данных бухгалтерского учета в <highlighttext>Oracle</highlighttext> Hyperion Financial Management на ежемесячной основе. Трансформация бухгалтерской отчетности по стандартам МСФО в <highlighttext>Oracle</highlighttext>...",
+        "salary_min": 120000,
+        "salary_max": 145000,
+        "currency": "руб.",
+        "employer": "ТЕЛЕБАЗИС",
+        "employer_url": "https://hh.ru/vacancy/95714976"
     },
     {
         "id": "96719647",
@@ -336,18 +336,6 @@
         "employer_url": "https://hh.ru/vacancy/96884315"
     },
     {
-        "id": "95705727",
-        "name": "Стажер-разработчик",
-        "area": "Санкт-Петербург",
-        "requirement": "Знание Java, C#, Python, C++. Опыт работы с PostgreSQL / Postgres Pro, <highlighttext>Oracle</highlighttext>, My SQL, MS SQL. Знание систем контроля версий.",
-        "responsibility": "Разработка настольных и веб-приложений. Разработка баз данных. Настройка системы. Тестирование результатов и устранение замечаний. Введение в проектную деятельность: Современные...",
-        "salary_min": 40000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "Крит",
-        "employer_url": "https://hh.ru/vacancy/95705727"
-    },
-    {
         "id": "95588320",
         "name": "Junior - программист",
         "area": "Казань",
@@ -360,6 +348,18 @@
         "employer_url": "https://hh.ru/vacancy/95588320"
     },
     {
+        "id": "95705727",
+        "name": "Стажер-разработчик",
+        "area": "Санкт-Петербург",
+        "requirement": "Знание Java, C#, Python, C++. Опыт работы с PostgreSQL / Postgres Pro, <highlighttext>Oracle</highlighttext>, My SQL, MS SQL. Знание систем контроля версий.",
+        "responsibility": "Разработка настольных и веб-приложений. Разработка баз данных. Настройка системы. Тестирование результатов и устранение замечаний. Введение в проектную деятельность: Современные...",
+        "salary_min": 40000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Крит",
+        "employer_url": "https://hh.ru/vacancy/95705727"
+    },
+    {
         "id": "95606661",
         "name": "Стажёр-тестировщик",
         "area": "Москва",
@@ -370,6 +370,18 @@
         "currency": "",
         "employer": "Передовые Платежные Решения",
         "employer_url": "https://hh.ru/vacancy/95606661"
+    },
+    {
+        "id": "97183013",
+        "name": "Java developer",
+        "area": "Казань",
+        "requirement": "Опыт разработки на Java от 1 года, Spring от 6 мес. Опыт работы с базами данных, умение писать и оптимизировать...",
+        "responsibility": "Разработка и оптимизация серверной части платформы. Поддержка существующих и разработка новых решений. Диагностирование ошибок и сбоев, исправление причин. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "Гриндата",
+        "employer_url": "https://hh.ru/vacancy/97183013"
     },
     {
         "id": "88876496",
@@ -408,18 +420,6 @@
         "employer_url": "https://hh.ru/vacancy/95678867"
     },
     {
-        "id": "97183013",
-        "name": "Java developer",
-        "area": "Казань",
-        "requirement": "Опыт разработки на Java от 1 года, Spring от 6 мес. Опыт работы с базами данных, умение писать и оптимизировать...",
-        "responsibility": "Разработка и оптимизация серверной части платформы. Поддержка существующих и разработка новых решений. Диагностирование ошибок и сбоев, исправление причин. ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "Гриндата",
-        "employer_url": "https://hh.ru/vacancy/97183013"
-    },
-    {
         "id": "97044851",
         "name": "Директор по развитию бизнеса",
         "area": "Москва",
@@ -454,6 +454,18 @@
         "currency": "",
         "employer": "Матрешка Лаб",
         "employer_url": "https://hh.ru/vacancy/95857907"
+    },
+    {
+        "id": "96205875",
+        "name": "Специалист по работе с клиентами (фармацевтика)",
+        "area": "Москва",
+        "requirement": "Специальные знания (программы, системы и т.д.) - ERP (SAP; <highlighttext>Oracle</highlighttext>), Excel + Word. Личные компетенции – способность выполнять многозадачную работу, уметь...",
+        "responsibility": "Ведет заказы дистрибьюторов: прием и обработка заказов, подтверждение наличия продукции на складе, сроков годности и сроков поставки, информационная поддержка дистрибьюторов...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "TEVA",
+        "employer_url": "https://hh.ru/vacancy/96205875"
     },
     {
         "id": "96497766",
@@ -492,18 +504,6 @@
         "employer_url": "https://hh.ru/vacancy/96998313"
     },
     {
-        "id": "96205875",
-        "name": "Специалист по работе с клиентами (фармацевтика)",
-        "area": "Москва",
-        "requirement": "Специальные знания (программы, системы и т.д.) - ERP (SAP; <highlighttext>Oracle</highlighttext>), Excel + Word. Личные компетенции – способность выполнять многозадачную работу, уметь...",
-        "responsibility": "Ведет заказы дистрибьюторов: прием и обработка заказов, подтверждение наличия продукции на складе, сроков годности и сроков поставки, информационная поддержка дистрибьюторов...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "TEVA",
-        "employer_url": "https://hh.ru/vacancy/96205875"
-    },
-    {
         "id": "85002915",
         "name": "Младший разработчик",
         "area": "Москва",
@@ -540,6 +540,18 @@
         "employer_url": "https://hh.ru/vacancy/96838008"
     },
     {
+        "id": "95438264",
+        "name": "Аналитик (SQL)",
+        "area": "Москва",
+        "requirement": "Уметь ориентироваться в 1С, БД <highlighttext>Oracle</highlighttext>/Postgres. Владеть основными методиками анализа большого кол-ва информации. Хорошо владеть Английским на...",
+        "responsibility": "Аудит формирования операционной и финансовой отчетности. Поиск аномалий учета. Автоматизация ручных процессов. Делать сверки данных систем внутреннего учета с данными...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "ProfeeLab",
+        "employer_url": "https://hh.ru/vacancy/95438264"
+    },
+    {
         "id": "96601372",
         "name": "Программист Python",
         "area": "Москва",
@@ -562,18 +574,6 @@
         "currency": "",
         "employer": "Гриндата",
         "employer_url": "https://hh.ru/vacancy/97183015"
-    },
-    {
-        "id": "95438264",
-        "name": "Аналитик (SQL)",
-        "area": "Москва",
-        "requirement": "Уметь ориентироваться в 1С, БД <highlighttext>Oracle</highlighttext>/Postgres. Владеть основными методиками анализа большого кол-ва информации. Хорошо владеть Английским на...",
-        "responsibility": "Аудит формирования операционной и финансовой отчетности. Поиск аномалий учета. Автоматизация ручных процессов. Делать сверки данных систем внутреннего учета с данными...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "ProfeeLab",
-        "employer_url": "https://hh.ru/vacancy/95438264"
     },
     {
         "id": "97190610",
@@ -720,6 +720,30 @@
         "employer_url": "https://hh.ru/vacancy/94686551"
     },
     {
+        "id": "95895669",
+        "name": "Java Developer",
+        "area": "Краснодар",
+        "requirement": "Ты имеешь опыт работы с реляционными СУБД (PostgreSQL, <highlighttext>Oracle</highlighttext>) и знаешь SQL. Обладаешь опытом работы с Hibernate. Знание Spring Boot. ",
+        "responsibility": "Участие в разработке приложений на Java. Отладку и исправление ошибок. Написание unit-тестов. Взаимодействие с командой разработки.",
+        "salary_min": 90000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "ФОДЖИН",
+        "employer_url": "https://hh.ru/vacancy/95895669"
+    },
+    {
+        "id": "96787483",
+        "name": "Диспетчер",
+        "area": "Домодедово",
+        "requirement": "Уверенный пользователь ПК (Microsoft Office). Ответственность, коммуникабельность, стрессоустойчивость. Готовность к активной работе, умение работать в режиме многозадачности.",
+        "responsibility": "Запуск рейсов в системе <highlighttext>Oracle</highlighttext> согласно графику ППР. Координация и контроль водителей-экспедиторов сторонних организаций (прибытие, погрузка/ выгрузка согласно графику). ",
+        "salary_min": 70000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Компания Русский Свет",
+        "employer_url": "https://hh.ru/vacancy/96787483"
+    },
+    {
         "id": "96197767",
         "name": "React/JS разработчик (картографический сервис)",
         "area": "Москва",
@@ -744,40 +768,16 @@
         "employer_url": "https://hh.ru/vacancy/96970056"
     },
     {
-        "id": "96787483",
-        "name": "Диспетчер",
-        "area": "Домодедово",
-        "requirement": "Уверенный пользователь ПК (Microsoft Office). Ответственность, коммуникабельность, стрессоустойчивость. Готовность к активной работе, умение работать в режиме многозадачности.",
-        "responsibility": "Запуск рейсов в системе <highlighttext>Oracle</highlighttext> согласно графику ППР. Координация и контроль водителей-экспедиторов сторонних организаций (прибытие, погрузка/ выгрузка согласно графику). ",
-        "salary_min": 70000,
+        "id": "97083321",
+        "name": "Ведущий инженер ПТО по планированию производства",
+        "area": "Омск",
+        "requirement": "Продвинутый уровень владения MS Excel (ВПР, сводные таблицы, навыки использования макросов станет преимуществом). Опыт работы в MS Project, <highlighttext>Oracle</highlighttext> Primavera...",
+        "responsibility": "Формирование годовых, квартальных, месячных и недельных календарно-сетевых графиков разного уровня. Сбор данных и обработка информации для план/факторного анализа...",
+        "salary_min": 250000,
         "salary_max": 0,
         "currency": "руб.",
-        "employer": "Компания Русский Свет",
-        "employer_url": "https://hh.ru/vacancy/96787483"
-    },
-    {
-        "id": "95895669",
-        "name": "Java Developer",
-        "area": "Краснодар",
-        "requirement": "Ты имеешь опыт работы с реляционными СУБД (PostgreSQL, <highlighttext>Oracle</highlighttext>) и знаешь SQL. Обладаешь опытом работы с Hibernate. Знание Spring Boot. ",
-        "responsibility": "Участие в разработке приложений на Java. Отладку и исправление ошибок. Написание unit-тестов. Взаимодействие с командой разработки.",
-        "salary_min": 90000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "ФОДЖИН",
-        "employer_url": "https://hh.ru/vacancy/95895669"
-    },
-    {
-        "id": "97098480",
-        "name": "Java разработчик",
-        "area": "Москва",
-        "requirement": "Уверенные знания Java.Core 8+ (I/O Streams, Collections, Multithreading, Collection Streams). Опыт работы с J2EE, Spring Framework...",
-        "responsibility": "Разработка и сопровождение функционала системы на современном технологичеcком стэке Java. Решение инциденты на L2 уровне технической поддержки. ",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "Банк Русский Стандарт",
-        "employer_url": "https://hh.ru/vacancy/97098480"
+        "employer": "Контакт Интернэшнл",
+        "employer_url": "https://hh.ru/vacancy/97083321"
     },
     {
         "id": "96675564",
@@ -792,6 +792,30 @@
         "employer_url": "https://hh.ru/vacancy/96675564"
     },
     {
+        "id": "96819171",
+        "name": "QA Engineer / Тестировщик",
+        "area": "Москва",
+        "requirement": "Опыт работы с SQL-запросами к БД (<highlighttext>Oracle</highlighttext>/MS SQL). Опыт тестирования REST API и web-интерфейсов, понимание принципов работы...",
+        "responsibility": "Составление сценариев тестирования. Подготовка тестовых данных. Проход по цепочке запросов (система Источник-система Приёмник). Участие в совместном тестировании Внутренняя система...",
+        "salary_min": 0,
+        "salary_max": 115000,
+        "currency": "руб.",
+        "employer": "eCredit",
+        "employer_url": "https://hh.ru/vacancy/96819171"
+    },
+    {
+        "id": "97098480",
+        "name": "Java разработчик",
+        "area": "Москва",
+        "requirement": "Уверенные знания Java.Core 8+ (I/O Streams, Collections, Multithreading, Collection Streams). Опыт работы с J2EE, Spring Framework...",
+        "responsibility": "Разработка и сопровождение функционала системы на современном технологичеcком стэке Java. Решение инциденты на L2 уровне технической поддержки. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "Банк Русский Стандарт",
+        "employer_url": "https://hh.ru/vacancy/97098480"
+    },
+    {
         "id": "97000166",
         "name": "Системный администратор процессингового центра",
         "area": "Череповец",
@@ -802,54 +826,6 @@
         "currency": "руб.",
         "employer": "БАНК СГБ",
         "employer_url": "https://hh.ru/vacancy/97000166"
-    },
-    {
-        "id": "97124684",
-        "name": "Системный администратор",
-        "area": "Волгоград",
-        "requirement": "Уверенное знание операционных систем (Windows Server 2003/2019, Windows XP/11). Знание систем виртуализации (Hyper-V, VMware, KVM). ",
-        "responsibility": "Развёртывание и администрирование ОС в виртуальных средах <highlighttext>Oracle</highlighttext> VM VirtualBox, VMware. Оперативное устранение неисправностей оборудования СПД/ЛВС /СВТ. ",
-        "salary_min": 130000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "Энергоремонт",
-        "employer_url": "https://hh.ru/vacancy/97124684"
-    },
-    {
-        "id": "97083321",
-        "name": "Ведущий инженер ПТО по планированию производства",
-        "area": "Омск",
-        "requirement": "Продвинутый уровень владения MS Excel (ВПР, сводные таблицы, навыки использования макросов станет преимуществом). Опыт работы в MS Project, <highlighttext>Oracle</highlighttext> Primavera...",
-        "responsibility": "Формирование годовых, квартальных, месячных и недельных календарно-сетевых графиков разного уровня. Сбор данных и обработка информации для план/факторного анализа...",
-        "salary_min": 250000,
-        "salary_max": 0,
-        "currency": "руб.",
-        "employer": "Контакт Интернэшнл",
-        "employer_url": "https://hh.ru/vacancy/97083321"
-    },
-    {
-        "id": "96764367",
-        "name": "Методолог календарно-сетевого планирования",
-        "area": "Нижний Новгород",
-        "requirement": "...строительство, строительство линейных объектов и др. Важно владение программными продуктами: <highlighttext>Oracle</highlighttext> Primavera, MS Project, Spider Project, Bentley Synchro и другими...",
-        "responsibility": "Методолог календарно-сетевого планирования. Разработка и описание новых функций календарно-сетевого планирования и проектного управления, защита ТЗ перед руководством и...",
-        "salary_min": 100000,
-        "salary_max": 300000,
-        "currency": "руб.",
-        "employer": "Цифровые практики",
-        "employer_url": "https://hh.ru/vacancy/96764367"
-    },
-    {
-        "id": "96990361",
-        "name": "Junior аналитик прогнозирования кредитного портфеля",
-        "area": "Москва",
-        "requirement": "Высшее образование (экономическое, финансовое, математическое). Хорошие знания и практический опыт использования <highlighttext>Oracle</highlighttext> SQL. Знание стандартов резервирования МСФО 9, методологии резервирования...",
-        "responsibility": "Расчет резервов в рамках МСФО и РСБУ отчетности. Работа в <highlighttext>Oracle</highlighttext> SQL с базой данных. Подготовка аналитических и управленческих отчетов...",
-        "salary_min": 0,
-        "salary_max": 160000,
-        "currency": "руб.",
-        "employer": "МТС Финтех",
-        "employer_url": "https://hh.ru/vacancy/96990361"
     },
     {
         "id": "95925088",
@@ -864,16 +840,28 @@
         "employer_url": "https://hh.ru/vacancy/95925088"
     },
     {
-        "id": "96819171",
-        "name": "QA Engineer / Тестировщик",
-        "area": "Москва",
-        "requirement": "Опыт работы с SQL-запросами к БД (<highlighttext>Oracle</highlighttext>/MS SQL). Опыт тестирования REST API и web-интерфейсов, понимание принципов работы...",
-        "responsibility": "Составление сценариев тестирования. Подготовка тестовых данных. Проход по цепочке запросов (система Источник-система Приёмник). Участие в совместном тестировании Внутренняя система...",
-        "salary_min": 0,
-        "salary_max": 115000,
+        "id": "96764367",
+        "name": "Методолог календарно-сетевого планирования",
+        "area": "Нижний Новгород",
+        "requirement": "...строительство, строительство линейных объектов и др. Важно владение программными продуктами: <highlighttext>Oracle</highlighttext> Primavera, MS Project, Spider Project, Bentley Synchro и другими...",
+        "responsibility": "Методолог календарно-сетевого планирования. Разработка и описание новых функций календарно-сетевого планирования и проектного управления, защита ТЗ перед руководством и...",
+        "salary_min": 100000,
+        "salary_max": 300000,
         "currency": "руб.",
-        "employer": "eCredit",
-        "employer_url": "https://hh.ru/vacancy/96819171"
+        "employer": "Цифровые практики",
+        "employer_url": "https://hh.ru/vacancy/96764367"
+    },
+    {
+        "id": "97124684",
+        "name": "Системный администратор",
+        "area": "Волгоград",
+        "requirement": "Уверенное знание операционных систем (Windows Server 2003/2019, Windows XP/11). Знание систем виртуализации (Hyper-V, VMware, KVM). ",
+        "responsibility": "Развёртывание и администрирование ОС в виртуальных средах <highlighttext>Oracle</highlighttext> VM VirtualBox, VMware. Оперативное устранение неисправностей оборудования СПД/ЛВС /СВТ. ",
+        "salary_min": 130000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "Энергоремонт",
+        "employer_url": "https://hh.ru/vacancy/97124684"
     },
     {
         "id": "94254962",
@@ -888,40 +876,16 @@
         "employer_url": "https://hh.ru/vacancy/94254962"
     },
     {
-        "id": "97018817",
-        "name": "Middle Java Developer",
+        "id": "96990361",
+        "name": "Junior аналитик прогнозирования кредитного портфеля",
         "area": "Москва",
-        "requirement": "Опыт коммерческой разработки на Java от 2-х лет. Опыт работы с базами данных (<highlighttext>Oracle</highlighttext>, MongoDB, PostgreSQL). Желание разрабатывать на...",
-        "responsibility": "Поддерживать и развивать текущие проекты на Java. Разрабатывать новые проекты на Java и Go. Участвовать в проектировании архитектуры. ",
+        "requirement": "Высшее образование (экономическое, финансовое, математическое). Хорошие знания и практический опыт использования <highlighttext>Oracle</highlighttext> SQL. Знание стандартов резервирования МСФО 9, методологии резервирования...",
+        "responsibility": "Расчет резервов в рамках МСФО и РСБУ отчетности. Работа в <highlighttext>Oracle</highlighttext> SQL с базой данных. Подготовка аналитических и управленческих отчетов...",
         "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "ИТТК",
-        "employer_url": "https://hh.ru/vacancy/97018817"
-    },
-    {
-        "id": "95895668",
-        "name": "Java Developer",
-        "area": "Ростов-на-Дону",
-        "requirement": "Ты имеешь опыт работы с реляционными СУБД (PostgreSQL, <highlighttext>Oracle</highlighttext>) и знаешь SQL. Обладаешь опытом работы с Hibernate. Знание Spring Boot. ",
-        "responsibility": "Участие в разработке приложений на Java. Отладку и исправление ошибок. Написание unit-тестов. Взаимодействие с командой разработки.",
-        "salary_min": 90000,
-        "salary_max": 0,
+        "salary_max": 160000,
         "currency": "руб.",
-        "employer": "ФОДЖИН",
-        "employer_url": "https://hh.ru/vacancy/95895668"
-    },
-    {
-        "id": "97081799",
-        "name": "Инженер по сопровождению/junior DevOps",
-        "area": "Новосибирск",
-        "requirement": "Опыт работы с ОС Linux. Опыт работы с промышленными СУБД:PostgreSQL, <highlighttext>Oracle</highlighttext> и опыт их администрирования. Опыт работы с системами...",
-        "responsibility": "Проект: Технологический сервис безопасности, обеспечивающий контроль межсервисных взаимодействий. Ключевые функции продукта: аутентификация, авторизации и аудит событий ИБ в рамках межсервисных...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "SberTech",
-        "employer_url": "https://hh.ru/vacancy/97081799"
+        "employer": "МТС Финтех",
+        "employer_url": "https://hh.ru/vacancy/96990361"
     },
     {
         "id": "97124708",
@@ -936,28 +900,40 @@
         "employer_url": "https://hh.ru/vacancy/97124708"
     },
     {
-        "id": "95076429",
-        "name": "Junior Marketing Data Analyst",
+        "id": "95895668",
+        "name": "Java Developer",
+        "area": "Ростов-на-Дону",
+        "requirement": "Ты имеешь опыт работы с реляционными СУБД (PostgreSQL, <highlighttext>Oracle</highlighttext>) и знаешь SQL. Обладаешь опытом работы с Hibernate. Знание Spring Boot. ",
+        "responsibility": "Участие в разработке приложений на Java. Отладку и исправление ошибок. Написание unit-тестов. Взаимодействие с командой разработки.",
+        "salary_min": 90000,
+        "salary_max": 0,
+        "currency": "руб.",
+        "employer": "ФОДЖИН",
+        "employer_url": "https://hh.ru/vacancy/95895668"
+    },
+    {
+        "id": "97018817",
+        "name": "Middle Java Developer",
         "area": "Москва",
-        "requirement": "Опыт написания SQL-запросов различной сложности в <highlighttext>Oracle</highlighttext>. Английский уровня Intermediate и выше. Навыки работы с Python или с другими...",
-        "responsibility": "Написание простых и средней сложности запросов SQL запросов в <highlighttext>Oracle</highlighttext>. Подготовка оперативных ad-hoc срезов по метрикам. On-going отчетность...",
+        "requirement": "Опыт коммерческой разработки на Java от 2-х лет. Опыт работы с базами данных (<highlighttext>Oracle</highlighttext>, MongoDB, PostgreSQL). Желание разрабатывать на...",
+        "responsibility": "Поддерживать и развивать текущие проекты на Java. Разрабатывать новые проекты на Java и Go. Участвовать в проектировании архитектуры. ",
         "salary_min": 0,
         "salary_max": 0,
         "currency": "",
-        "employer": "ProfeeLab",
-        "employer_url": "https://hh.ru/vacancy/95076429"
+        "employer": "ИТТК",
+        "employer_url": "https://hh.ru/vacancy/97018817"
     },
     {
-        "id": "97153451",
-        "name": "Системный администратор (офис)",
-        "area": "Санкт-Петербург",
-        "requirement": "Опыт работы с маршрутизаторами Cisco. Администрирование Linux (<highlighttext>Oracle</highlighttext>, RedHat), уверенное владение bash, интеграция cервисов с Win-доменом. Практика работы с...",
-        "responsibility": "Администрирование серверов и систем на базе Linux (<highlighttext>Oracle</highlighttext>, RedHat). Управление виртуальными средами на базе VMware vSphere (VMWare Site Recovery Management...",
-        "salary_min": 135000,
-        "salary_max": 160000,
-        "currency": "руб.",
-        "employer": "ОКР",
-        "employer_url": "https://hh.ru/vacancy/97153451"
+        "id": "97081799",
+        "name": "Инженер по сопровождению/junior DevOps",
+        "area": "Новосибирск",
+        "requirement": "Опыт работы с ОС Linux. Опыт работы с промышленными СУБД:PostgreSQL, <highlighttext>Oracle</highlighttext> и опыт их администрирования. Опыт работы с системами...",
+        "responsibility": "Проект: Технологический сервис безопасности, обеспечивающий контроль межсервисных взаимодействий. Ключевые функции продукта: аутентификация, авторизации и аудит событий ИБ в рамках межсервисных...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "SberTech",
+        "employer_url": "https://hh.ru/vacancy/97081799"
     },
     {
         "id": "96613941",
@@ -972,6 +948,18 @@
         "employer_url": "https://hh.ru/vacancy/96613941"
     },
     {
+        "id": "95076429",
+        "name": "Junior Marketing Data Analyst",
+        "area": "Москва",
+        "requirement": "Опыт написания SQL-запросов различной сложности в <highlighttext>Oracle</highlighttext>. Английский уровня Intermediate и выше. Навыки работы с Python или с другими...",
+        "responsibility": "Написание простых и средней сложности запросов SQL запросов в <highlighttext>Oracle</highlighttext>. Подготовка оперативных ad-hoc срезов по метрикам. On-going отчетность...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "ProfeeLab",
+        "employer_url": "https://hh.ru/vacancy/95076429"
+    },
+    {
         "id": "93453655",
         "name": "Java-разработчик (удалённо)",
         "area": "Москва",
@@ -982,6 +970,18 @@
         "currency": "",
         "employer": "DCloud",
         "employer_url": "https://hh.ru/vacancy/93453655"
+    },
+    {
+        "id": "97153451",
+        "name": "Системный администратор (офис)",
+        "area": "Санкт-Петербург",
+        "requirement": "Опыт работы с маршрутизаторами Cisco. Администрирование Linux (<highlighttext>Oracle</highlighttext>, RedHat), уверенное владение bash, интеграция cервисов с Win-доменом. Практика работы с...",
+        "responsibility": "Администрирование серверов и систем на базе Linux (<highlighttext>Oracle</highlighttext>, RedHat). Управление виртуальными средами на базе VMware vSphere (VMWare Site Recovery Management...",
+        "salary_min": 135000,
+        "salary_max": 160000,
+        "currency": "руб.",
+        "employer": "ОКР",
+        "employer_url": "https://hh.ru/vacancy/97153451"
     },
     {
         "id": "92032011",
@@ -1056,6 +1056,18 @@
         "employer_url": "https://hh.ru/vacancy/96816391"
     },
     {
+        "id": "95861529",
+        "name": "Backend Developer",
+        "area": "Москва",
+        "requirement": "Понимание принципов работы как классических RDBMS (Postresql/Mysql/<highlighttext>Oracle</highlighttext>), так и баз из других лиг (например Tarantool, MongoDB, RocksDB, Redis). ",
+        "responsibility": "Разрабатывать новые сервисы на Kotlin и поддерживать существующие. У нас в районе 100 сервисов и микросервисов в kubernetes. ",
+        "salary_min": 0,
+        "salary_max": 360000,
+        "currency": "руб.",
+        "employer": "getmatch",
+        "employer_url": "https://hh.ru/vacancy/95861529"
+    },
+    {
         "id": "96019907",
         "name": "Инженер по тестированию ПО (Middle/Senior)",
         "area": "Москва",
@@ -1080,18 +1092,6 @@
         "employer_url": "https://hh.ru/vacancy/95852076"
     },
     {
-        "id": "94606545",
-        "name": "Бизнес-аналитик со знанием SQL (удаленно)/Data scientist",
-        "area": "Санкт-Петербург",
-        "requirement": "Высшее образование. Обязательно знание sql (<highlighttext>oracle</highlighttext>), excel - продвинутый пользователь, желательно знание Phyton. Программа ДМС.",
-        "responsibility": "Анализ данных. Анализ поведения клиентов. Формирование выгрузок по заданию. Взаимодействие с контрагентами в части данных. Выстраивание процессов обработки и очистки...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "ПКБ",
-        "employer_url": "https://hh.ru/vacancy/94606545"
-    },
-    {
         "id": "96252031",
         "name": "Java-разработчик (middle)",
         "area": "Казань",
@@ -1102,30 +1102,6 @@
         "currency": "руб.",
         "employer": "Казанский (Приволжский) федеральный университет",
         "employer_url": "https://hh.ru/vacancy/96252031"
-    },
-    {
-        "id": "95861529",
-        "name": "Backend Developer",
-        "area": "Москва",
-        "requirement": "Понимание принципов работы как классических RDBMS (Postresql/Mysql/<highlighttext>Oracle</highlighttext>), так и баз из других лиг (например Tarantool, MongoDB, RocksDB, Redis). ",
-        "responsibility": "Разрабатывать новые сервисы на Kotlin и поддерживать существующие. У нас в районе 100 сервисов и микросервисов в kubernetes. ",
-        "salary_min": 0,
-        "salary_max": 360000,
-        "currency": "руб.",
-        "employer": "getmatch",
-        "employer_url": "https://hh.ru/vacancy/95861529"
-    },
-    {
-        "id": "96441277",
-        "name": "Java Developer",
-        "area": "Москва",
-        "requirement": "Java 17, Spring, K8s, Kafka, Gitlab CI/CD, ArgoCD, JFrog, Jira, Confluence. Принципы наблюдаемости систем (logs, tracing, metrics). ",
-        "responsibility": "Разработка и развитие инструментов автоматизации администрирования. Развертывания и внедрение современных подходов к CI/CD в продуктовой разработке. Участие в проектировании...",
-        "salary_min": 0,
-        "salary_max": 0,
-        "currency": "",
-        "employer": "Бюро кредитных историй Скоринг Бюро",
-        "employer_url": "https://hh.ru/vacancy/96441277"
     },
     {
         "id": "95569797",
@@ -1140,6 +1116,30 @@
         "employer_url": "https://hh.ru/vacancy/95569797"
     },
     {
+        "id": "94606545",
+        "name": "Бизнес-аналитик со знанием SQL (удаленно)/Data scientist",
+        "area": "Санкт-Петербург",
+        "requirement": "Высшее образование. Обязательно знание sql (<highlighttext>oracle</highlighttext>), excel - продвинутый пользователь, желательно знание Phyton. Программа ДМС.",
+        "responsibility": "Анализ данных. Анализ поведения клиентов. Формирование выгрузок по заданию. Взаимодействие с контрагентами в части данных. Выстраивание процессов обработки и очистки...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "ПКБ",
+        "employer_url": "https://hh.ru/vacancy/94606545"
+    },
+    {
+        "id": "96441277",
+        "name": "Java Developer",
+        "area": "Москва",
+        "requirement": "Java 17, Spring, K8s, Kafka, Gitlab CI/CD, ArgoCD, JFrog, Jira, Confluence. Принципы наблюдаемости систем (logs, tracing, metrics). ",
+        "responsibility": "Разработка и развитие инструментов автоматизации администрирования. Развертывания и внедрение современных подходов к CI/CD в продуктовой разработке. Участие в проектировании...",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "Бюро кредитных историй Скоринг Бюро",
+        "employer_url": "https://hh.ru/vacancy/96441277"
+    },
+    {
         "id": "96491527",
         "name": "Junior разработчик",
         "area": "Новосибирск",
@@ -1150,6 +1150,18 @@
         "currency": "",
         "employer": "Экспобанк",
         "employer_url": "https://hh.ru/vacancy/96491527"
+    },
+    {
+        "id": "97179755",
+        "name": "Разработчик SQL",
+        "area": "Москва",
+        "requirement": "Опыт работы в области ИТ от 1 года. Хорошие математические знания. Знание <highlighttext>Oracle</highlighttext>, SQL, PL/SQL. Знание SAP Business Objects. ",
+        "responsibility": "Разрабатывать архитектуру хранения данных Корпоративного хранилища данных. Разрабатывать и модифицировать ETL-процедуры наполнения структур хранения данных Корпоративного хранилища данных. ",
+        "salary_min": 0,
+        "salary_max": 0,
+        "currency": "",
+        "employer": "МегаФон",
+        "employer_url": "https://hh.ru/vacancy/97179755"
     },
     {
         "id": "93318563",
@@ -1186,17 +1198,5 @@
         "currency": "руб.",
         "employer": "Контакт Интернэшнл",
         "employer_url": "https://hh.ru/vacancy/97083319"
-    },
-    {
-        "id": "95784055",
-        "name": "Devops инженер в ДИТ",
-        "area": "Москва",
-        "requirement": "Опыт администрирования и конфигурация СУБД: PostgreSQL, <highlighttext>Oracle</highlighttext> DB. Опыт работы с публичными клауд провайдерами: AWS, OCI, GKE, Azure (c одним...",
-        "responsibility": "Поддержка и развитие текущих CI/CD решений. Создание pipeline-проектов в Jenkins и Gitlab для автоматизации запусков автотестов, разворачивания окружений...",
-        "salary_min": 200000,
-        "salary_max": 400000,
-        "currency": "руб.",
-        "employer": "ОКС",
-        "employer_url": "https://hh.ru/vacancy/95784055"
     }
 ]

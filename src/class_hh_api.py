@@ -3,7 +3,7 @@ import requests
 
 
 class HeadHunterAPI(HHapiABC):
-    """Класс для получения данных с HH."""
+    """Класс для получения данных с HeadHAnter."""
     def __init__(self):
         self.status_code = 0
 

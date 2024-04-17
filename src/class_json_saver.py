@@ -1,9 +1,12 @@
+# Этот класс предназначен для работы с списками объектов и словарей вакансий.
+
 import json
 from src.class_abstract import JsonManager
 from src.class_vacancy import Vacancy
 
 
 class JSONSaver(JsonManager):
+    """Этот класс предназначен для работы с списками объектов и словарей вакансий."""
     def __init__(self, vacancies_objects_list, json_file):
         self.create_vacancies_list(vacancies_objects_list, json_file)  # подготовка списка вакансий
 
@@ -65,7 +68,7 @@ class JSONSaver(JsonManager):
             vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_min, reverse=True)
         else:
             vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_max, reverse=True)
-        # Фильтрация топ top_n вакансий или сколько выбралось.
+        # Фильтрация топ top_n вакансий или сколько выбралось len(vacancies_dict_list).
         my_vacancies_list = []
         if len(vacancies_dict_list) < int(top_n):
             top = len(vacancies_dict_list)
@@ -79,8 +82,8 @@ class JSONSaver(JsonManager):
 
     def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file):
         """Выборка по дипазону зарплаты. Объект vac_object явлется эталоном для сравнения.
-        Выборка считается удочной, если верхняя и нижняя зарплаты входят в дипазан или если верхняя или нижняя
-        входят в дипазон в случае когда ее пара не указана."""
+        Выборка считается удочной, если верхняя и нижняя границы зарплаты входят в дипазан
+        или если верхняя или нижняя входят в дипазон в случае когда их пара не указана."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if self.__lte__(vacancies_objects_list[i], vac_obj) and self.__gte__(vacancies_objects_list[i], vac_obj):
