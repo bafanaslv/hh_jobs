@@ -4,9 +4,13 @@ from src.class_vacancy import Vacancy
 
 
 class JSONSaver(JsonManager):
-    @staticmethod
-    def create_vacancies_list(vacancies):
-        vacancies_list = []
+    def __init__(self, vacancies_objects_list, json_file):
+        self.vacancies_objects_list = vacancies_objects_list
+        self.json_file = json_file
+        self.create_vacancies_list(vacancies_objects_list, json_file)
+
+    def create_vacancies_list(self, vacancies, json_file):
+        my_vacancies_list = []
         for vacancy in vacancies:
             vacancy_dict = {"id": vacancy.id,
                             "name": vacancy.name,
@@ -18,8 +22,9 @@ class JSONSaver(JsonManager):
                             "currency": vacancy.currency,
                             "employer": vacancy.employer,
                             "employer_url": vacancy.employer_url}
-            vacancies_list.append(vacancy_dict)
-        return vacancies_list
+            my_vacancies_list.append(vacancy_dict)
+        self.save_json_file(my_vacancies_list, json_file)
+        return my_vacancies_list
 
     def save_json_file(self, vacancies_list, json_file):
         with open(json_file, 'w', encoding="UTF-8") as file:

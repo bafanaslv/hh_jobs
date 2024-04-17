@@ -17,6 +17,10 @@ class HHapiABC(ABC):
 
 class JsonManager(ABC):
     @abstractmethod
+    def __init__(self, vacancies_objects_list, json_file):
+        pass
+
+    @abstractmethod
     def save_json_file(self, vacancies, json_file):
         pass
 

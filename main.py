@@ -12,14 +12,15 @@ if __name__ == '__main__':
         # параметры запроса
         params = {'text': vacancy_name, 'area': '113', 'currency': 'RUR', 'per_page': 100, 'page': 0}
         page_quantity = 2  # количество выбираемых страниц
-        # create_json_file - функция для формирования списка объектов вакансий vacancies_objects_list
+
+        # create_vacancies_list - функция для формирования списка объектов вакансий vacancies_objects_list
         vacancies_objects_list = create_vacancies_list(params, page_quantity, URL_GET)
-        # получаем список словарей вакансий vacancies_dict_list в новом усеченном формате
-        json_manager = JSONSaver()
-        vacancies_dict_list = json_manager.create_vacancies_list(vacancies_objects_list)
-        # сохраняем список словарей вакансий vacancies_dict_list в json - файл VACANCIES_FILE
-        json_manager.save_json_file(vacancies_dict_list, VACANCIES_FILE)
-        if len(vacancies_dict_list) > 0:
+
+        # Создаем объект manager и одновременно получаем список словарей вакансий в новом усеченном формате
+        # и сохраняем его а json - файле VACANCIES_FILE
+        json_manager = JSONSaver(vacancies_objects_list, VACANCIES_FILE)
+
+        if len(vacancies_objects_list) > 0:
             print("1.Вывести все вакансии\n"
                   "2.Получить топ N вакансий по зарплате\n"
                   "3.Получить вакансии по региону\n"
@@ -28,6 +29,7 @@ if __name__ == '__main__':
             if answer not in ['1', '2', '3', '4']:
                 answer = '0'
             elif answer == '1':
+                # Выборка топ N вакансий
                 json_manager.print_vacancies(vacancies_objects_list)
                 answer = '0'
             elif answer == '2':
@@ -41,9 +43,8 @@ if __name__ == '__main__':
             elif answer == '4':
                 # Выборка вакансий по ключевому слову
                 json_manager.select_vacancies_by_word(vacancies_objects_list, "sql", VACANCIES_FILE)
-                answer = '0'
+#                answer = '0'
         else:
             print('По запросу ничего не найдено!')
-
     else:
         print('Запрос не введен.')
