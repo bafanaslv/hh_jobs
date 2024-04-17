@@ -72,6 +72,9 @@ class JSONSaver(JsonManager):
             i += 1
         return my_vacancies_list
 
+    def vacancies_range_salary(self, vacancies_dict_list, top_n, json_file, answer):
+        pass
+
     def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file):
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):

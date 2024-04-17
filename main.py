@@ -29,12 +29,13 @@ def users_menu():
             print("1.Вывести все вакансии\n"
                   "2.Получить топ N вакансий по нижнему уровню зарплаты\n"
                   "3.Получить топ N вакансий по верхнему уровню зарплаты\n"
-                  "4.Получить вакансии по региону\n"
-                  "5.Получить вакансии с ключевым словом в описании\n"
-                  "6.Удалить из json-файла выбранный регион\n"
-                  "7.Добавить к json-файлу свои вакансии")
+                  "4.Получить вакансии по дипазону зарплат\n"
+                  "5.Получить вакансии по региону\n"
+                  "6.Получить вакансии с ключевым словом в описании\n"
+                  "7.Удалить из json-файла выбранный регион\n"
+                  "8.Добавить к json-файлу свои вакансии из другого json-файла")
             answer = input()  # ввод номера опции выбора
-            if answer not in ['1', '2', '3', '4', '5', '6', '7']:
+            if answer not in ['1', '2', '3', '4', '5', '6', '7', '8']:
                 print('Не выбрана ни одна опция !')
             elif answer == '1':
                 # Вывод всех найденных вакансий.
@@ -48,6 +49,15 @@ def users_menu():
                 else:
                     print('Необходимо ввести целое положительное число.')
             elif answer == '4':
+                # Выборка вакансий по дипазону зарплат.
+                text = input(f'Введите количество топ вакансий по зарплате:\n')
+                if text.isdigit():
+                    sel_obj_list = json_manager.vacancies_range_salary(vacancies_objects_list, text, JSON_FILE,
+                                                                     answer)
+                    json_manager.print_vacancies(sel_obj_list)
+                else:
+                    print('Необходимо ввести целое положительное число.')
+            elif answer == '5':
                 # Выборка вакансий по региону и вывод.
                 text = input(f'Введите нименование региона:\n')
                 if len(text):
@@ -55,7 +65,7 @@ def users_menu():
                     json_manager.print_vacancies(sel_obj_list)
                 else:
                     print('Регион поиска не введен.')
-            elif answer == '5':
+            elif answer == '6':
                 # Выборка вакансий по ключевому слову и вывод.
                 text = input(f'Введите ключевое слово:\n')
                 if len(text):
@@ -63,7 +73,7 @@ def users_menu():
                     json_manager.print_vacancies(sel_obj_list)
                 else:
                     print('Ключевое слово не введено.')
-            elif answer == '6':
+            elif answer == '7':
                 # Выборка вакансий по региону и вывод сохрание а json-файл.
                 text = input(f'Введите нименование региона, который хотите удалить из json-файла:\n')
                 if len(text):
@@ -71,7 +81,7 @@ def users_menu():
                     print('К файлу vacancies.json добавлен my_vacancies.json.')
                 else:
                     print('Регион для удаления не введен.')
-            elif answer == '7':
+            elif answer == '8':
                 json_manager.add_vacancies(Vacancy.max_id, JSON_FILE, MY_JSON_FILE)
                 print('Файл vacancies.json изменен и сохранен.')
         else:
