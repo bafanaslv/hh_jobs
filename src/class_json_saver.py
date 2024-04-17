@@ -60,23 +60,24 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_list[i])
         self.save_json_file(my_vacancies_list, json_file)
 
-    def vacancies_top_salary(self, vacancies_dict_list, top_n, json_file, answer):
+    def vacancies_top_salary(self, vacancies_obj_list, top_n, json_file, answer):
         """Выборка топ top_n по зарплате. По нижней или верхней границе в зависимости от того какую опцию выбрал
         пользователь. answer == '2' - по минимальной, answer == '3' по максимальной"""
         # предварительная сотрировка по убыванию размера зарплаты
         if answer == '2':
-            vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_min, reverse=True)
+            vacancies_obj_list.sort(key=lambda vacancies_obj_list: vacancies_obj_list.salary_min, reverse=True)
         else:
-            vacancies_dict_list.sort(key=lambda vacancies_dict_list: vacancies_dict_list.salary_max, reverse=True)
+            vacancies_obj_list.sort(key=lambda vacancies_obj_list: vacancies_obj_list.salary_max, reverse=True)
+
         # Фильтрация топ top_n вакансий или сколько выбралось len(vacancies_dict_list).
         my_vacancies_list = []
-        if len(vacancies_dict_list) < int(top_n):
-            top = len(vacancies_dict_list)
+        if len(vacancies_obj_list) < int(top_n):
+            top = len(vacancies_obj_list)
         else:
             top = int(top_n)
         i = 0
         while i < top:
-            my_vacancies_list.append(vacancies_dict_list[i])
+            my_vacancies_list.append(vacancies_obj_list[i])
             i += 1
         return my_vacancies_list
 

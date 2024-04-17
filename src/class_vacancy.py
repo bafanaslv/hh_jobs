@@ -13,9 +13,9 @@ class Vacancy:
 
     max_id = 0  # максимальный идентификатор вакансии
 
-    def __init__(self, id, name, area, requirement, responsibility, salary_min, salary_max,
+    def __init__(self, idv, name, area, requirement, responsibility, salary_min, salary_max,
                  currency, employer, employer_url):
-        self.idv = id
+        self.idv = idv
         self.name = name
         self.area = area
         self.requirement = requirement
@@ -35,7 +35,7 @@ class Vacancy:
                 vac_id = int(vacancy["id"])
                 salary_min, salary_max, currency = cls.salary_valid(vacancy['salary'])
                 responsibility = cls.responsibility_valid(vacancy['snippet'])
-                vacancies_list.append(cls(id=vacancy["id"],
+                vacancies_list.append(cls(idv=vacancy["id"],
                                       name=vacancy["name"],
                                       area=vacancy['area']['name'],
                                       requirement=vacancy['snippet']['requirement'],
