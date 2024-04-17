@@ -29,7 +29,6 @@ if __name__ == '__main__':
                 answer = '0'
             elif answer == '1':
                 json_manager.print_vacancies(vacancies_objects_list)
-                print(f'Найдено {len(vacancies_dict_list)} вакансий.\n')
                 answer = '0'
             elif answer == '2':
                 # Выборка топ N вакансий
