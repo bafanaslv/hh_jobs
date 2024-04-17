@@ -69,7 +69,7 @@ class JSONSaver(JsonManager):
         else:
             vacancies_obj_list.sort(key=lambda vacancies_obj_list: vacancies_obj_list.salary_max, reverse=True)
 
-        # Фильтрация топ top_n вакансий или сколько выбралось len(vacancies_dict_list).
+        # Фильтрация топ top_n вакансий или сколько выбралось top = len(vacancies_dict_list).
         my_vacancies_list = []
         if len(vacancies_obj_list) < int(top_n):
             top = len(vacancies_obj_list)
