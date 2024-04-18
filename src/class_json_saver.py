@@ -65,11 +65,11 @@ class JSONSaver(JsonManager):
         пользователь. answer == '2' - по минимальной, answer == '3' по максимальной"""
         # предварительная сотрировка по убыванию размера зарплаты
         if answer == '2':
-            vacancies_obj_list.sort(key=lambda vacancies_obj_list: vacancies_obj_list.salary_min, reverse=True)
+            vacancies_obj_list.sort(key=lambda x: x.salary_min, reverse=True)
         else:
-            vacancies_obj_list.sort(key=lambda vacancies_obj_list: vacancies_obj_list.salary_max, reverse=True)
+            vacancies_obj_list.sort(key=lambda x: x.salary_max, reverse=True)
 
-        # Фильтрация топ top_n вакансий или сколько выбралось top = len(vacancies_dict_list).
+        # Фильтрация топ top = top_n вакансий или берем сколько нашлось top = len(vacancies_dict_list).
         my_vacancies_list = []
         if len(vacancies_obj_list) < int(top_n):
             top = len(vacancies_obj_list)
@@ -84,7 +84,7 @@ class JSONSaver(JsonManager):
     def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file):
         """Выборка по дипазону зарплаты. Объект vac_object явлется эталоном для сравнения.
         Выборка считается удочной, если верхняя и нижняя границы зарплаты входят в дипазан
-        или если верхняя или нижняя входят в дипазон в случае когда их пара не указана."""
+        или если верхняя или нижняя входят в дипазон в случае когда соотвествующая им пара не указана."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
             if self.__lte__(vacancies_objects_list[i], vac_obj) and self.__gte__(vacancies_objects_list[i], vac_obj):
@@ -94,7 +94,7 @@ class JSONSaver(JsonManager):
     @staticmethod
     def __lte__(vacancy, other):
         """Сравнение вхождения в диапазон нижней зарплаты. Если она не указана,
-        то проверяем вхождение в дипазон верхней зарплаты."""
+        то проверяем вхождение в диапазон верхней зарплаты."""
         if isinstance(other, Vacancy):
             if vacancy.salary_min > 0:
                 return other.salary_min <= vacancy.salary_min <= other.salary_max
@@ -106,7 +106,7 @@ class JSONSaver(JsonManager):
     @staticmethod
     def __gte__(vacancy, other):
         """Сравнение вхождения в диапазон верхней зарплаты. Если она не указана,
-        то проверяем вхождение в дипазон нижней зарплаты."""
+        то проверяем вхождение в диапазон нижней зарплаты."""
         if isinstance(other, Vacancy):
             if vacancy.salary_max > 0:
                 return other.salary_min <= vacancy.salary_max <= other.salary_max
@@ -119,7 +119,7 @@ class JSONSaver(JsonManager):
         """Из списка объектов берем только если регион area_name совпадает с введенным."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
-            if vacancies_objects_list[i].area == area_name:
+            if vacancies_objects_list[i].area.lower() == area_name.lower():
                 my_vacancies_list.append(vacancies_objects_list[i])
         return my_vacancies_list
 
@@ -128,7 +128,8 @@ class JSONSaver(JsonManager):
         в требованиях к соискателю или в должностных обязанностях."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
-            if word in vacancies_objects_list[i].requirement or word in vacancies_objects_list[i].responsibility:
+            if (word.lower() in vacancies_objects_list[i].requirement.lower() or
+                    word.lower() in vacancies_objects_list[i].responsibility.lower()):
                 my_vacancies_list.append(vacancies_objects_list[i])
         return my_vacancies_list
 

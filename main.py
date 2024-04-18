@@ -43,7 +43,10 @@ def users_menu():
                 json_manager.print_vacancies(vacancies_objects_list)
             elif answer == '2' or answer == '3':
                 # Выборка топ N вакансий по нижнему уровню зарплаты и вывод.
-                text = input(f'Введите количество топ вакансий по зарплате:\n')
+                if answer == '2':
+                    text = input(f'Введите количество топ вакансий по нижней границе зарплаты:\n')
+                else:
+                    text = input(f'Введите количество топ вакансий по верхней границе зарплаты:\n')
                 if text.isdigit():
                     sel_obj_list = json_manager.vacancies_top_salary(vacancies_objects_list, text, JSON_FILE, answer)
                     json_manager.print_vacancies(sel_obj_list)
