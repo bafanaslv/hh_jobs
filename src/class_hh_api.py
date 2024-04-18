@@ -1,26 +1,18 @@
-from abc import ABC, abstractmethod
+from src.class_abstract import HHapiABC
 import requests
 
 
-class HHapiABC(ABC):
-    @abstractmethod
-    def __init__(self):
-        pass
-
-    @abstractmethod
-    def get_vacancies(self, params):
-        pass
-
-
 class HeadHunterAPI(HHapiABC):
-    def __init__(self, url_get):
-        self.url_get = url_get
+    """Класс для получения данных с HeadHAnter."""
+    def __init__(self):
         self.status_code = 0
 
-    def get_vacancies(self, params):
-        response = requests.get(self.url_get, params=params)
+    def get_status_code(self):
+        """Возврат статуса запроса к ресурсу url_get."""
+        return self.status_code
+
+    def get_vacancies(self, url_get, params):
+        """Получение вакансий с ресурса url_get и возврат их в json-формате используя словарь с параметрами params."""
+        response = requests.get(url_get, params)
         self.status_code = response.status_code
         return response.json()
-
-    def get_status_code(self):
-        return self.status_code
