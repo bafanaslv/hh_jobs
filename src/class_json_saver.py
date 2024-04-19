@@ -10,7 +10,7 @@ class JSONSaver(JsonManager):
     def __init__(self, vacancies_objects_list, json_file):
         self.create_vacancies_list(vacancies_objects_list, json_file)  # подготовка списка вакансий
 
-    def create_vacancies_list(self, vacancies, json_file):
+    def create_vacancies_list(self, vacancies, json_file) -> list:
         """Подготовка списка словарей вакансий из json-файла."""
         my_vacancies_list = []
         for vacancy in vacancies:
@@ -60,7 +60,7 @@ class JSONSaver(JsonManager):
                 my_vacancies_list.append(vacancies_list[i])
         self.save_json_file(my_vacancies_list, json_file)
 
-    def vacancies_top_salary(self, vacancies_obj_list, top_n, json_file, answer):
+    def vacancies_top_salary(self, vacancies_obj_list, top_n, json_file, answer) -> list:
         """Выборка топ top_n по зарплате. По нижней или верхней границе в зависимости от того какую опцию выбрал
         пользователь. answer == '2' - по минимальной, answer == '3' по максимальной"""
         # предварительная сотрировка по убыванию размера зарплаты
@@ -81,7 +81,7 @@ class JSONSaver(JsonManager):
             i += 1
         return my_vacancies_list
 
-    def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file):
+    def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file) -> list:
         """Выборка по дипазону зарплаты. Объект vac_object явлется эталоном для сравнения.
         Выборка считается удочной, если верхняя и нижняя границы зарплаты входят в дипазан
         или если верхняя или нижняя входят в дипазон в случае когда соотвествующая им пара не указана."""
@@ -92,7 +92,7 @@ class JSONSaver(JsonManager):
         return my_vacancies_list
 
     @staticmethod
-    def __lte__(vacancy, other):
+    def __lte__(vacancy, other) -> bool:
         """Сравнение вхождения в диапазон нижней зарплаты. Если она не указана,
         то проверяем вхождение в диапазон верхней зарплаты."""
         if isinstance(other, Vacancy):
@@ -104,7 +104,7 @@ class JSONSaver(JsonManager):
         return False
 
     @staticmethod
-    def __gte__(vacancy, other):
+    def __gte__(vacancy, other) -> bool:
         """Сравнение вхождения в диапазон верхней зарплаты. Если она не указана,
         то проверяем вхождение в диапазон нижней зарплаты."""
         if isinstance(other, Vacancy):
@@ -115,7 +115,7 @@ class JSONSaver(JsonManager):
                     return other.salary_min <= vacancy.salary_min <= other.salary_max
         return False
 
-    def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file):
+    def select_vacancies_by_region(self, vacancies_objects_list, area_name, json_file) -> list:
         """Из списка объектов берем только если регион area_name совпадает с введенным."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):

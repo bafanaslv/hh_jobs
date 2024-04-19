@@ -27,7 +27,7 @@ class Vacancy:
         self.employer_url = employer_url
 
     @classmethod
-    def create_objects_vacancy(cls, hh_vacancies, vacancies_list):
+    def create_objects_vacancy(cls, hh_vacancies, vacancies_list) -> list:
         """Метод для создания списка объектов вакансий из списка словарей полученных с HeadHanter hh_vacancies."""
         if isinstance(hh_vacancies, dict):
             vac_id = 0
@@ -54,7 +54,7 @@ class Vacancy:
             print('Ошибочный формат файла.')
 
     @staticmethod
-    def responsibility_valid(responsibility_item):
+    def responsibility_valid(responsibility_item) -> str:
         """Валидация должностных обязанностей."""
         if not responsibility_item:
             return ''
@@ -65,7 +65,7 @@ class Vacancy:
                 return responsibility_item["responsibility"]
 
     @staticmethod
-    def salary_valid(salary_item):
+    def salary_valid(salary_item) -> (int, int, str):
         """Валидация зарплаты и валюты."""
         if salary_item is None:
             salary_min = 0
@@ -92,7 +92,7 @@ class Vacancy:
 
         return salary_min, salary_max, currency
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Подготовка строк вакансий для вывода."""
         sal = ''
         if self.salary_min == 0 and self.salary_max == 0:
