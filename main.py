@@ -9,7 +9,7 @@ URL_GET = "https://api.hh.ru/vacancies"  # адрес HH для отправки
 
 
 def users_menu():
-    # vacancy_text - текст запроса на HH
+    # vacancy_text - текст запроса на Head Hanter
     vacancy_text = input(f'Введите поисковый запрос:\n')
     if len(vacancy_text) > 0:
         # параметры запроса
