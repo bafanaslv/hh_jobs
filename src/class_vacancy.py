@@ -11,7 +11,7 @@ class Vacancy:
     employer: str        # работодатель
     employer_url: str    # ссылка на вакансию
 
-    max_id = 0  # максимальный идентификатор вакансии
+    max_id = 0  # максимальный идентификатор вакансии, применяется при добавлении вакансии
 
     def __init__(self, idv, name, area, requirement, responsibility, salary_min, salary_max,
                  currency, employer, employer_url):
@@ -28,7 +28,7 @@ class Vacancy:
 
     @classmethod
     def create_objects_vacancy(cls, hh_vacancies, vacancies_list) -> list:
-        """Метод для создания списка объектов вакансий из списка словарей полученных с HeadHanter hh_vacancies."""
+        """Метод для создания списка объектов вакансий из списка словарей hh_vacancies полученных с HeadHanter."""
         if isinstance(hh_vacancies, dict):
             vac_id = 0
             for vacancy in hh_vacancies["items"]:
