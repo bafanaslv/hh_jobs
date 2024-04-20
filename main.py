@@ -14,7 +14,7 @@ def users_menu():
     if len(vacancy_text) > 0:
         # параметры запроса
         params = {'text': vacancy_text, 'area': '113', 'currency': 'RUR', 'per_page': 100, 'page': 0}
-        page_quantity = input(f'Введите количество страниц (не больше 20):\n')
+        page_quantity = input(f'Введите количество страниц (не более 20):\n')
         if not page_quantity.isdigit() or int(page_quantity) > 20:
             print('Неверный ввод - выбрана одна страница!')
             page_quantity = '1'
@@ -85,16 +85,16 @@ def users_menu():
                 else:
                     print('Ключевое слово не введено.')
             elif answer == '7':
-                # Выборка вакансий по региону и вывод сохрание а json-файл.
+                # Выборка вакансий по региону и сохраннние а json-файл.
                 text = input(f'Введите нименование региона, который хотите удалить из json-файла:\n')
                 if len(text):
                     json_manager.del_vacancies(text, JSON_FILE)
-                    print('К файлу vacancies.json добавлен my_vacancies.json.')
+                    print(f'Из файла {JSON_FILE} удален регион {text}.')
                 else:
                     print('Регион для удаления не введен.')
             elif answer == '8':
                 json_manager.add_vacancies(Vacancy.max_id, JSON_FILE, MY_JSON_FILE)
-                print('Файл vacancies.json изменен и сохранен.')
+                print(f'К файлу {JSON_FILE} добавлен файл {MY_JSON_FILE}.')
         else:
             print('По запросу ничего не найдено!')
     else:

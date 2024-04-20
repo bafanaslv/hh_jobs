@@ -16,6 +16,12 @@ def test_jsonsaver_object():
 
 
 @pytest.fixture
+def test_jsonsaver_object1():
+    """Создаем экземпляр класса JSONSaver."""
+    return JSONSaver
+
+
+@pytest.fixture
 def vacancy_object_sample():
     vac_object = Vacancy("0", "Программист", "Казань", "Все",
                          "И даже больше", 100000, 200000,
@@ -72,40 +78,50 @@ def test_vacancy_object6():
 
 
 def test_lte_salary1(test_jsonsaver_object, test_vacancy_object1, vacancy_object_sample):
-    """Проверка вхождения нижней границы зарлаты в диапазо при наличии верхней."""
+    """Проверка вхождения нижней границы зарлаты в диапазон при наличии верхней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object1, vacancy_object_sample) is True
 
 
 def test_gte_salary1(test_jsonsaver_object, test_vacancy_object1, vacancy_object_sample):
-    """Проверка вхождения верхней границы зарлаты в диапазо при наличии нижней."""
+    """Проверка вхождения верхней границы зарлаты в диапазон при наличии нижней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object1, vacancy_object_sample) is True
 
 
 def test_lte_salary2(test_jsonsaver_object, test_vacancy_object2, vacancy_object_sample):
-    """Проверка вхождения нижней границы зарлаты в диапазо при наличии верхней."""
+    """Проверка вхождения нижней границы зарлаты в диапазон при наличии верхней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object2, vacancy_object_sample) is False
 
 
 def test_gte_salary2(test_jsonsaver_object, test_vacancy_object2, vacancy_object_sample):
-    """Проверка вхождения верхней границы зарлаты в диапазо при наличии нижней."""
+    """Проверка вхождения верхней границы зарлаты в диапазон при наличии нижней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object2, vacancy_object_sample) is False
 
 
 def test_lte_salary3(test_jsonsaver_object, test_vacancy_object3, vacancy_object_sample):
-    """Проверка вхождения нижней границы зарлаты в диапазо при отсуствии верхней."""
+    """Проверка вхождения нижней границы зарлаты в диапазон при отсутствии верхней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object3, vacancy_object_sample) is True
 
 
 def test_gte_salary3(test_jsonsaver_object, test_vacancy_object4, vacancy_object_sample):
-    """Проверка вхождения верхней границы зарлаты в диапазо при отсуствии нижней."""
+    """Проверка вхождения верхней границы зарлаты в диапазон при отсутствии нижней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object4, vacancy_object_sample) is True
 
 
 def test_lte_salary4(test_jsonsaver_object, test_vacancy_object5, vacancy_object_sample):
-    """Проверка вхождения нижней границы зарлаты в диапазо при отсуствии верхней."""
+    """Проверка вхождения нижней границы зарлаты в диапазон при отсутствии верхней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object5, vacancy_object_sample) is False
 
 
 def test_gte_salary4(test_jsonsaver_object, test_vacancy_object6, vacancy_object_sample):
-    """Проверка вхождения верхней границы зарлаты в диапазо при отсуствии нижней."""
+    """Проверка вхождения верхней границы зарлаты в диапазон при отсутствии нижней."""
     assert test_jsonsaver_object.__lte__(test_vacancy_object6, vacancy_object_sample) is False
+
+
+def test_isinstance_lte(test_jsonsaver_object, test_vacancy_object6, test_jsonsaver_object1):
+    """Проверка типов сравниваемых объектов."""
+    assert test_jsonsaver_object.__lte__(test_vacancy_object6, test_jsonsaver_object1) is False
+
+
+def test_isinstance_gte(test_jsonsaver_object, test_vacancy_object6, test_jsonsaver_object1):
+    """Проверка типов сравниваемых объектов."""
+    assert test_jsonsaver_object.__gte__(test_vacancy_object6, test_jsonsaver_object1) is False

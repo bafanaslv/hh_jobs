@@ -1,4 +1,4 @@
-# Этот класс предназначен для работы с списками объектов и словарей вакансий.
+# JSONSaver класс предназначен для работы со списками объектов и словарей вакансий.
 
 import json
 from src.class_abstract import JsonManager
@@ -6,12 +6,12 @@ from src.class_vacancy import Vacancy
 
 
 class JSONSaver(JsonManager):
-    """Этот класс предназначен для работы с списками объектов и словарей вакансий."""
+    """Этот класс предназначен для работы со списками объектов и словарей вакансий."""
     def __init__(self, vacancies_objects_list, json_file):
         self.create_vacancies_list(vacancies_objects_list, json_file)  # подготовка списка вакансий
 
     def create_vacancies_list(self, vacancies, json_file) -> list:
-        """Подготовка списка словарей вакансий из json-файла."""
+        """Подготовка списка словарей вакансий my_vacancies_list из json-файла."""
         my_vacancies_list = []
         for vacancy in vacancies:
             vacancy_dict = {"id": vacancy.idv,
@@ -41,7 +41,7 @@ class JSONSaver(JsonManager):
             return json.load(file)
 
     def add_vacancies(self, max_id, json_file, my_json_file):
-        """Добавление в json-файл вакакнсий находящихся в json-файле my_json_file."""
+        """Добавление в json-файл вакансий, находящихся в json-файле my_json_file."""
         vacancies_list = self.load_json_file(json_file)
         my_vacancies_list = self.load_json_file(my_json_file)
         for new_vacancy in my_vacancies_list:
@@ -52,7 +52,7 @@ class JSONSaver(JsonManager):
         self.save_json_file(vacancies_list, json_file)
 
     def del_vacancies(self, area_name, json_file):
-        """Удаление из json-файла с ненужных вакансий региона area_name."""
+        """Удаление из json-файла ненужных вакансий региона area_name."""
         my_vacancies_list = []
         vacancies_list = self.load_json_file(json_file)
         for i in range(len(vacancies_list)):
@@ -63,13 +63,13 @@ class JSONSaver(JsonManager):
     def vacancies_top_salary(self, vacancies_obj_list, top_n, json_file, answer) -> list:
         """Выборка топ top_n по зарплате. По нижней или верхней границе в зависимости от того какую опцию выбрал
         пользователь. answer == '2' - по минимальной, answer == '3' по максимальной"""
-        # предварительная сотрировка по убыванию размера зарплаты
+        # Предварительная сортировка по убыванию размера зарплаты.
         if answer == '2':
             vacancies_obj_list.sort(key=lambda x: x.salary_min, reverse=True)
         else:
             vacancies_obj_list.sort(key=lambda x: x.salary_max, reverse=True)
 
-        # Фильтрация топ top = top_n вакансий или берем сколько нашлось top = len(vacancies_dict_list).
+        # Фильтрация топ (top = top_n) вакансий или берем сколько нашлось (top = len(vacancies_dict_list)).
         my_vacancies_list = []
         if len(vacancies_obj_list) < int(top_n):
             top = len(vacancies_obj_list)
@@ -82,8 +82,8 @@ class JSONSaver(JsonManager):
         return my_vacancies_list
 
     def vacancies_range_salary(self, vacancies_objects_list, vac_obj, json_file) -> list:
-        """Выборка по дипазону зарплаты. Объект vac_object явлется эталоном для сравнения.
-        Выборка считается удочной, если верхняя и нижняя границы зарплаты входят в дипазан
+        """Выборка по дипазону зарплаты. Объект vac_object является эталоном для сравнения.
+        Выборка считается удачной, если верхняя и нижняя границы зарплаты входят в дипазан
         или если верхняя или нижняя входят в дипазон в случае когда соотвествующая им пара не указана."""
         my_vacancies_list = []
         for i in range(len(vacancies_objects_list)):
